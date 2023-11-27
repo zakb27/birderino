@@ -1,11 +1,14 @@
 import React from "react";
-
-import AdminNav from "../components/AdminNav"
-import UserNav from "../components/UserNav"
+import DashNav from "../components/DashNav"
 import { useDispatch, useSelector } from 'react-redux';
-const Dash = () =>{
+import AdminNav from "../components/AdminNav";
+import UserNav from "../components/UserNav";
+
+
+const Submit = () =>{
+
+
     const isAdmin = useSelector((state) => state.user.isAdmin);
-    console.log(isAdmin)
     return(
         <>
             {isAdmin ?
@@ -13,13 +16,11 @@ const Dash = () =>{
                 :
                 (<UserNav />)
             }
-            <div className={'dashPage background'}>
-                <p>dash page</p>
+            <div className={'submitPage background'}>
+                <p>Submit page</p>
             </div>
         </>
     )
-
 }
 
-
-export default Dash;
+export default Submit;

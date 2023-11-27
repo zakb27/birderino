@@ -4,7 +4,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    background-color: pink;
+    /*background-color: rgba(255, 255, 255, 0.25);*/
     align-items: center;
     justify-content: space-between;
     height:100px;
@@ -12,12 +12,14 @@
     font-family: 'Poppins', sans-serif;
     padding: 0 30px 0;
     font-weight: 400;
+    position: absolute;
+
 
 }
 
 .navbar h1{
     font-size: 3rem;
-    color: black;
+    color: #344e41;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -40,25 +42,32 @@
 
 }
 
-.sign{
-    color: black;
-    border-bottom:2px solid rgba(0,0,0,0);
 
+
+.links{
+    text-decoration: none;
+    color: white;
+}
+.active{
+    color: green;
+}
+.sign{
+    border-bottom:2px solid rgba(0,0,0,0);
 }
 
 .register{
     padding:5px 20px;
-    background-color: deepskyblue;
-    border: 2px solid white;
+    color: #344e41;
+    background-color: #a3b18a;
+    border: 2px solid #3a5a40;
     border-radius: 20px;
 
 }
 
 .sign:hover{
-    border-bottom:2px solid black
+    border-bottom:2px solid #a3b18a;
 }
 .register:hover{
     background-color: rgba(0,0,0,0);
-    color: black;
-    border:2px solid black;
+    color: white;
 }

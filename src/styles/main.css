@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Poppins:wght@300;400;500&display=swap');
+
+.background{
+    background: rgb(212,163,115);
+    background: linear-gradient(50deg, rgba(212,163,115,1) 0%, rgba(204,213,174,1) 52%, rgba(88,129,87,1) 100%);
+    min-height: 100vh;
+    width: 100vw;
+    padding: 25px;
+
+}
+.mission{
+    margin-top: 150px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    min-height:600px;
+    padding: 5%;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 15px;
+}
+.mission div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width:30%;
+
+}
+/*img{*/
+/*    height:auto;*/
+/*    max-width: 100px;*/
+/*}*/
+
+.mission img{
+    box-shadow: #344e41 5px 5px;
+    border-radius: 5px;
+    width:60%;
+    max-width: 900px;
+    min-width:350px;
+    height: auto;
+}
+.mission div h1{
+    font-size: 3.5rem;
+    font-weight:700;
+    color: #344e41;
+
+}
+
+.mission div h3{
+    font-size:1.5rem;
+    font-weight: 400;
+    color: #344e41;
+
+
+}
+.mission div button{
+    background: #a3b18a;
+
+    border-radius: 20px;
+    border: 2px solid #3a5a40;
+    transition: 0.3s;
+    cursor: pointer;
+    color: #3a5a40;
+    padding:5px 100px;
+    font-weight:400;
+    font-size:1.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.mission div button:hover{
+    background: rgba(58, 90, 64, 0);
+    color: #3a5a40;
+
+}
+
+.birdsections{
+    margin: 200px auto;
+    /*height:800px;*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.birdsections div{
+    background: rgba(255, 255, 255, 0.2);
+    /*border:3px solid white;*/
+    padding:25px;
+    border-radius: 15px;
+    height:500px;
+    width:25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s;
+
+}
+
+.birdsections div:hover{
+    transform:scale(1.1)
+}
+
+.birdsections div img{
+    border-radius: 5px;
+    box-shadow: #344e41 5px 5px;
+
+    object-fit: cover;
+    width:100%;
+    height:300px;
+}
+
+.birdsections div h2{
+    font-size:2rem;
+    color: #344e41;
+}
+
+.homeContainer {
+}
+footer{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height:50px;
+    margin-top: -50px;
+    gap:5px;
+    background-color: rgba(255, 255, 255, 0.15);
+
+}
+footer a{
+    color: black;
+    cursor: pointer;
+    margin-top: 4px;
+    transition: 0.3s;
+}
+footer a:hover{
+    transform:scale(1.1);
+}
+footer h4{
+    font-size:0.8rem;
+}

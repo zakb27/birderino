@@ -1,18 +1,30 @@
 import React from "react";
 import '../styles/nav.css'
+import {NavLink} from "react-router-dom";
 const DashNav = () =>{
 
 
     return(
         <nav className={'navbar'}>
-            <h1>Birderino</h1>
+            <NavLink to={'/'} className={'links'}>
+                <h1>Birderino</h1>
+            </NavLink>
             <ul>
-                <li className={'sign'}>Sign in </li>
-                <li className={'register'}>Register</li>
+                <li>
+                    <NavLink to={'/signin'} activeclassname={'active'} className={'links'}>
+                        <span className={'sign'}>Sign in</span>
+                    </NavLink>
+                </li>
+
+                <li>
+                    <NavLink to={'/register'} activeclassname={'active'} className={'links'}>
+                        <span className={'register'}>Register</span>
+                    </NavLink>
+                </li>
+
             </ul>
         </nav>
     )
-
 }
 
 export default DashNav;

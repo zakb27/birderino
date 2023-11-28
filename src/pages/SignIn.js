@@ -70,7 +70,7 @@ const SignIn = () =>{
                     onChange={(e) => setAssociate(e.target.value)}
                 />
 
-                <button type="submit">Sign in</button>
+                <button type="submit" tabIndex='0'>Sign in</button>
                 <p>Don't have an account? Register <span onClick={e=>navigate('/register')}>here:</span> </p>
 
             </form>

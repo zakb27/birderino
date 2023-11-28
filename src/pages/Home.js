@@ -24,7 +24,7 @@ const Home = () =>{
                     <h1>Join the birdwatch</h1>
                     <h3>Discover the joy of bird counting! Your observations matter.
                         Join us in celebrating the beauty of birds. Count with purpose, connect with nature.</h3>
-                    <button onClick={navigate('/register')}>Register</button>
+                    <button onClick={e=>navigate('/register')} tabIndex='0'>Register</button>
                 </div>
                 <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bird sat on a branch"/>
             </section>

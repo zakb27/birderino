@@ -94,7 +94,7 @@ const Register = () =>{
                 placeholder={"Associate..."}
             />
 
-            <button type="submit">Register</button>
+            <button type="submit" tabIndex='0'>Register</button>
                 <p>Already have an account? Sign in <span onClick={e=>navigate('/signin')}>here:</span> </p>
         </form>
             </div>

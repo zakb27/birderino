@@ -1,16 +1,29 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../styles/nav.css'
 import {NavLink} from "react-router-dom";
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import {IoMdClose} from "react-icons/io";
 const AdminNav = () =>{
 
+
+    const tester = useRef();
+    const openMenu = ()=>{
+        // tester.current.style.display='block';
+        tester.current.style.display='flex'
+    }
+    const closeMenu = ()=>{
+        // tester.current.style.display='block';
+        tester.current.style.display='none'
+    }
 
     return(
         <nav className={'navbar'}>
             <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
                 <h1>Birderino Pro</h1>
             </NavLink>
-            <ul>
+            <RxHamburgerMenu onClick={e=>openMenu()}/>
+            <ul ref={tester}>
+                <IoMdClose onClick={e=>closeMenu()}/>
                 <li>
                     <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
                         <span className={'dash'}>Dashboard</span>
@@ -25,6 +38,11 @@ const AdminNav = () =>{
                 <li>
                     <NavLink to={'/flagged'} activeclassname={'active'} className={'links'}>
                         <span className={'flagged'}>Flagged tickets</span>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
+                        <span className={'settings'}>Settings</span>
                     </NavLink>
                 </li>
                 <li>

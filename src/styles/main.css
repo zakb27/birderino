@@ -2,12 +2,14 @@
 
 .background{
     background: rgb(212,163,115);
-    background: linear-gradient(50deg, rgba(212,163,115,1) 0%, rgba(204,213,174,1) 52%, rgba(88,129,87,1) 100%);
+    background: linear-gradient(90deg,rgba(204,213,174,1) 0%, rgba(88,129,87,1) 100%);
     min-height: 100vh;
     width: 100vw;
-    padding: 25px;
 
+    padding: 25px;
 }
+
+
 .mission{
     margin-top: 150px;
     display: flex;
@@ -141,4 +143,61 @@ footer a:hover{
 }
 footer h4{
     font-size:0.8rem;
+}
+
+
+
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding:100px 50px;
+    max-width:700px;
+    /*height:80vh;*/
+    margin: 100px auto;
+    gap:10px;
+}
+.registerForm{
+    height:650px;
+}
+.loginForm{
+    height:500px;
+}
+
+input{
+    width:100%;
+    border:none;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+form label{
+    align-self: flex-start;
+    margin-left: 10px;
+}
+form button{
+    margin-top: 25px;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 1.5rem;
+    background-color: #344e41;
+    color: #a3b18a;
+    width:70%;
+    padding:10px 0;
+    border: 2px solid green;
+    transition: 0.2s;
+    border-radius: 25px;
+}
+
+form button:hover{
+    background-color: #a3b18a;
+}
+form p span{
+    color: #344e41;
+    cursor: pointer;
+    border-bottom: 2px solid #344e41;
 }

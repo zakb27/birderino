@@ -41,13 +41,14 @@ const SignIn = () =>{
             <div className={'background'}>
 
 
-            <h1>Sign in</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} className={'loginForm'}>
+                <h1>Sign in</h1>
                 <label>Email:</label>
                 <input
                     type="email"
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
+                    placeholder={"Email..."}
                     required
                 />
 
@@ -56,17 +57,21 @@ const SignIn = () =>{
                     type="password"
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
+                    placeholder={"Password..."}
                     required
                 />
 
-                <label>Associated Code:(Optional)</label>
+                <label>Associate Code:(Optional)</label>
                 <input
                     type="text"
                     value={code}
+                    placeholder={"Associate..."}
                     onChange={(e) => setAssociate(e.target.value)}
                 />
 
                 <button type="submit">Sign in</button>
+                <p>Don't have an account? Register <span onClick={e=>navigate('/signin')}>here:</span> </p>
+
             </form>
             </div>
         </>

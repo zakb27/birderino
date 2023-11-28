@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useRef} from "react";
 import '../styles/nav.css'
 import {NavLink} from "react-router-dom";
-
+import { RxHamburgerMenu } from "react-icons/rx";
+import {IoMdClose} from "react-icons/io";
 const UserNav = () =>{
+
+    const tester = useRef();
+    const openMenu = ()=>{
+        // tester.current.style.display='block';
+        tester.current.style.display='flex'
+    }
+    const closeMenu = ()=>{
+        // tester.current.style.display='block';
+        tester.current.style.display='none'
+    }
 
 
     return(
@@ -10,7 +21,9 @@ const UserNav = () =>{
             <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
                 <h1>Birderino Standard</h1>
             </NavLink>
-            <ul>
+            <RxHamburgerMenu onClick={e=>openMenu} />
+            <ul ref={tester}>
+                <IoMdClose onClick={e=>closeMenu()}/>
                 <li>
                     <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
                         <span className={'dash'}>Dashboard</span>

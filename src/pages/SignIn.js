@@ -3,6 +3,7 @@ import DashNav from "../components/DashNav"
 import {login, logout} from "../tools/Actions";
 import {useSelector, useDispatch } from 'react-redux'
 import {useNavigate} from 'react-router-dom';
+import Footer from "../components/Footer";
 
 
 const SignIn = () =>{
@@ -70,10 +71,12 @@ const SignIn = () =>{
                 />
 
                 <button type="submit">Sign in</button>
-                <p>Don't have an account? Register <span onClick={e=>navigate('/signin')}>here:</span> </p>
+                <p>Don't have an account? Register <span onClick={e=>navigate('/register')}>here:</span> </p>
 
             </form>
             </div>
+            <Footer />
+
         </>
     )
 }

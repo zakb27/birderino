@@ -22,33 +22,33 @@ const UserNav = () =>{
                 <h1>Birderino Standard</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu} />
-            <ul ref={tester}>
+            <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
-                        <span className={'dash'}>Dashboard</span>
+                        <span className={'dash'} tabIndex="0">Dashboard</span>
                     </NavLink>
                 </li>
 
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/stats'} activeclassname={'active'} className={'links'}>
                         <span className={'stats'}>Statistics</span>
                     </NavLink>
                 </li>
-                <li>
+                <li role="menuitem" tabIndex="0">
                     <NavLink to={'/submit'} activeclassname={'active'} className={'links'}>
-                        <span className={'submit'}>Submit results</span>
+                        <span className={'submit'}  tabIndex="0">Submit results</span>
                     </NavLink>
                 </li>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
-                        <span className={'settings'}>Settings</span>
+                        <span className={'settings'} tabIndex="0">Settings</span>
                     </NavLink>
                 </li>
 
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/'} activeclassname={'active'} className={'links'}>
-                        <span className={'signout'}>Sign out</span>
+                        <span className={'signout'} tabIndex="0">Sign out</span>
                     </NavLink>
                 </li>
             </ul>

@@ -22,17 +22,17 @@ const DashNav = () =>{
                 <h1>Birderino</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu()}/>
-            <ul ref={tester}>
+            <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
-                <li>
-                    <NavLink to={'/signin'} activeclassname={'active'} className={'links dashes'}>
-                        <span className={'sign'}>Sign in</span>
+                <li role="menuitem" >
+                    <NavLink to={'/signin'} className={'links dashes'}>
+                        <span className={'sign'} tabIndex="0">Sign in</span>
                     </NavLink>
                 </li>
 
-                <li>
-                    <NavLink to={'/register'} activeclassname={'active'} className={'links dashes'}>
-                        <span className={'register'}>Register</span>
+                <li role="menuitem">
+                    <NavLink to={'/register'} className={'links dashes'}>
+                        <span className={'register'} tabIndex="0">Register</span>
                     </NavLink>
                 </li>
             </ul>

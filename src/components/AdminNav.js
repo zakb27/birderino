@@ -22,32 +22,32 @@ const AdminNav = () =>{
                 <h1>Birderino Pro</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu()}/>
-            <ul ref={tester}>
+            <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
-                        <span className={'dash'}>Dashboard</span>
+                        <span className={'dash'}  tabIndex="0">Dashboard</span>
                     </NavLink>
                 </li>
 
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/stats'} activeclassname={'active'} className={'links'}>
-                        <span className={'stats'}>Statistics</span>
+                        <span className={'stats'}  tabIndex="0">Statistics</span>
                     </NavLink>
                 </li>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/flagged'} activeclassname={'active'} className={'links'}>
-                        <span className={'flagged'}>Flagged tickets</span>
+                        <span className={'flagged'}  tabIndex="0">Flagged tickets</span>
                     </NavLink>
                 </li>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
-                        <span className={'settings'}>Settings</span>
+                        <span className={'settings'} tabIndex="0">Settings</span>
                     </NavLink>
                 </li>
-                <li>
+                <li role="menuitem">
                     <NavLink to={'/'} activeclassname={'active'} className={'links'}>
-                        <span className={'signout'}>Sign out</span>
+                        <span className={'signout'} tabIndex="0">Sign out</span>
                     </NavLink>
                 </li>
             </ul>

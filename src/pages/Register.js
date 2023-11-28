@@ -3,6 +3,7 @@ import DashNav from "../components/DashNav"
 import {useNavigate } from 'react-router-dom';
 import {useSelector, useDispatch } from 'react-redux'
 import {login,logout} from "../tools/Actions.js";
+import Footer from "../components/Footer";
 const Register = () =>{
     const navigate = useNavigate();
     const dispatch = useDispatch()
@@ -97,7 +98,9 @@ const Register = () =>{
                 <p>Already have an account? Sign in <span onClick={e=>navigate('/signin')}>here:</span> </p>
         </form>
             </div>
-    </>
+            <Footer />
+
+        </>
 )
 }
 

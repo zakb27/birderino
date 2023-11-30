@@ -18,7 +18,7 @@ const UserNav = () =>{
 
     return(
         <nav className={'navbar'}>
-            <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
+            <NavLink to={'/dash'} className={'logo'}>
                 <h1>Birderino Standard</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu} />

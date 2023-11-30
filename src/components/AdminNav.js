@@ -17,8 +17,8 @@ const AdminNav = () =>{
     }
 
     return(
-        <nav className={'navbar'}>
-            <NavLink to={'/dash'} activeclassname={'active'} className={'links'}>
+        <nav className={'navbar adminNav'}>
+            <NavLink to={'/dash'} className={'logo'}>
                 <h1>Birderino Pro</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu()}/>
@@ -45,12 +45,10 @@ const AdminNav = () =>{
                         <span className={'settings'} tabIndex="0">Settings</span>
                     </NavLink>
                 </li>
-                <li role="menuitem">
-                    <NavLink to={'/'} activeclassname={'active'} className={'links'}>
-                        <span className={'signout'} tabIndex="0">Sign out</span>
-                    </NavLink>
-                </li>
             </ul>
+            <NavLink to={'/'} activeclassname={'active'} className={'diff'}>
+                <span className={'signout'} tabIndex="0">Sign out</span>
+            </NavLink>
         </nav>
     )
 }

@@ -18,20 +18,20 @@ const DashNav = () =>{
 
     return(
         <nav className={'navbar'}>
-            <NavLink to={'/'} className={'links'}>
+            <NavLink to={'/'} activeclassname={'else'}  className={'logo'}>
                 <h1>Birderino</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu()}/>
             <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
                 <li role="menuitem" >
-                    <NavLink to={'/signin'} className={'links dashes'}>
+                    <NavLink to={'/signin'} className={'dashes'}>
                         <span className={'sign'} tabIndex="0">Sign in</span>
                     </NavLink>
                 </li>
 
                 <li role="menuitem">
-                    <NavLink to={'/register'} className={'links dashes'}>
+                    <NavLink to={'/register'} className={'dashes'}>
                         <span className={'register'} tabIndex="0">Register</span>
                     </NavLink>
                 </li>

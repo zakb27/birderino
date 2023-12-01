@@ -17,9 +17,9 @@ const UserNav = () =>{
 
 
     return(
-        <nav className={'navbar'}>
+        <nav className={'navbar userNav'}>
             <NavLink to={'/dash'} className={'logo'}>
-                <h1>Birderino Standard</h1>
+                <h1>Birderino</h1>
             </NavLink>
             <RxHamburgerMenu onClick={e=>openMenu} />
             <ul ref={tester} role="menu" aria-label="menu">

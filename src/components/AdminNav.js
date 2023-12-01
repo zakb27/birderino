@@ -3,6 +3,7 @@ import '../styles/nav.css'
 import {NavLink} from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {IoMdClose} from "react-icons/io";
+import { IoSettingsSharp } from "react-icons/io5";
 const AdminNav = () =>{
 
 
@@ -41,14 +42,18 @@ const AdminNav = () =>{
                     </NavLink>
                 </li>
                 <li role="menuitem">
-                    <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
-                        <span className={'settings'} tabIndex="0">Settings</span>
-                    </NavLink>
+
                 </li>
             </ul>
-            <NavLink to={'/'} activeclassname={'active'} className={'diff'}>
-                <span className={'signout'} tabIndex="0">Sign out</span>
-            </NavLink>
+            <div>
+                <NavLink to={'/settings'} activeclassname={'active'} className={'settings_links'}>
+                    <span className={'settings'} tabIndex="0"><IoSettingsSharp /></span>
+                </NavLink>
+                <NavLink to={'/'} activeclassname={'active'} className={'diff'}>
+                    <span className={'signout'} tabIndex="0">Sign out</span>
+                </NavLink>
+            </div>
+
         </nav>
     )
 }

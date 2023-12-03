@@ -43,9 +43,9 @@ const AdminNav = () =>{
                         <span className={'flagged'}  tabIndex="0">Flagged tickets</span>
                     </NavLink>
                 </li>
-                <li role="menuitem">
+                {/*<li role="menuitem">*/}
 
-                </li>
+                {/*</li>*/}
             </ul>
             <div>
                 {/*<NavLink to={'/settings'} activeclassname={'active'} className={'dropdown_links'}>*/}

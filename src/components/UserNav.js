@@ -3,6 +3,7 @@ import '../styles/nav.css'
 import {NavLink} from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {IoMdClose} from "react-icons/io";
+import {IoSettingsSharp} from "react-icons/io5";
 const UserNav = () =>{
 
     const tester = useRef();
@@ -40,18 +41,19 @@ const UserNav = () =>{
                         <span className={'submit'}  tabIndex="0">Submit results</span>
                     </NavLink>
                 </li>
-                <li role="menuitem">
-                    <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
-                        <span className={'settings'} tabIndex="0">Settings</span>
-                    </NavLink>
-                </li>
-
-                <li role="menuitem">
-                    <NavLink to={'/'} activeclassname={'active'} className={'links'}>
-                        <span className={'signout'} tabIndex="0">Sign out</span>
-                    </NavLink>
-                </li>
             </ul>
+            <div>
+                {/*<NavLink to={'/settings'} activeclassname={'active'} className={'dropdown_links'}>*/}
+                {/*    <span className={'settings'} tabIndex="0"><FaSortDown /></span>*/}
+                {/*</NavLink>*/}
+                <NavLink to={'/settings'} activeclassname={'active'} className={'settings_links'}>
+                    <span className={'settings'} tabIndex="0"><IoSettingsSharp /></span>
+                </NavLink>
+                <NavLink to={'/'} activeclassname={'active'} className={'diff'}>
+                    <span className={'signout'} tabIndex="0">Sign out</span>
+                </NavLink>
+            </div>
+
         </nav>
     )
 

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@300;400;500&display=swap');
 
 .background{
     background: rgb(212,163,115);
@@ -389,9 +389,6 @@ form p span{
     width:100%;
 }
 
-#bigSummary{
-    display: none;
-}
 
 
 .searchPage{
@@ -405,7 +402,7 @@ form p span{
     font-size: 4rem;
 }
 .pageTitle{
-    margin: 0 auto;
+    margin: 100px auto;
     display: flex;
     flex-direction: row;
 }
@@ -429,17 +426,29 @@ form p span{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
     gap:50px;
+    max-width:1200px;
+    transition: 0.3s ease-in-out;
+
 
 }
 .bird{
-    width:100%;
-    max-width: 800px;
-    height:300px;
+    width:300px;
+    height:400px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background-color: white;
     border-radius:25px;
+    transition: 0.3s ease-in-out;
+    position:relative;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+
+
+}
+.bird:hover{
+    transform:scale(1.1);
 }
 
 .description{
@@ -448,15 +457,163 @@ form p span{
     align-items: center;
     justify-content: space-evenly;
 }
+
 .bird img{
-    height:300px;
-    width:200px;
-    border-radius: 25px 0 0 25px;
+    /*height:300px;*/
+    width:300px;
+    /*border-radius: 25px 0 0 25px;*/
+    height: 150px;
+    border-radius: 25px 25px 0 0;
     object-fit: cover;
+    object-position: 50% 15%;
 }
+.bird button{
+    background-color: rgba(0,0,0,0);
+    border:none;
+    position: absolute;
+    right:10px;
+    bottom:10px;
+    padding:5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+
+}
+.bird button svg{
+    box-sizing: content-box;
+    width:30px;
+    height: 30px;
+
+}
+.bird button:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+
+}
+.titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.titles h1{
+    font-size:2rem;
+    font-weight: 600;
+    margin-bottom:10px;
+}
+.titles h4{
+    font-weight: 400;
+    margin:0;
+    font-size: 1rem;
+}
+.seen{
+    font-size:2rem;
+    color: #588157;
+    margin:0;
+    padding:0;
+    position: absolute;
+    bottom:10px;
+
+}
+.left{
+    padding-left:10px;
+}
+.expanded {
+    width:100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    height:400px;
+    transition: 0.3s ease-in-out;
+}
+.expanded .titles{
+    display: flex;
+    flex-direction: column !important;
+    flex-wrap: nowrap;
+}
+.expanded .titles h1{
+    font-size: 3rem;
+    padding:0;
+}
+.expanded .titles h4{
+    font-size: 2rem;
+    padding:0;
+    align-items: center;
+}
+.expanded p{
+    font-size: 1.2rem;
+    transition: 0.3s ease-in-out;
+
+}
+.expanded .seen{
+    font-size: 2.5rem;
+}
+.expanded .remaining{
+    display: flex;
+    flex-direction: column;
+}
+
+.expanded:hover{
+    transform:scale(1);
+}
+.expanded img{
+    height:100%;
+    max-width:300px;
+    border-radius: 25px 0 0  25px;
+}
+
 .tester{
     display: block !important;
 }
 .tester2{
     display: none;
+}
+
+
+.submission{
+    position: absolute;
+    bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width:200px;
+}
+.submission svg{
+    width:40px;
+    height:40px;
+    background-color: rgba(128, 128, 128, 0.2);
+    border:1px solid black;
+    padding:5px;
+    cursor: pointer;
+}
+.submission svg:first-child{
+    border-radius: 10px 0 0 10px;
+}
+.submission svg:last-child{
+    border-radius: 0 10px  10px 0;
+}
+
+.submission input{
+    border-radius: 0;
+    width:80px;
+    height:40px;
+    border-top:1px solid black;
+    border-bottom:1px solid black;
+    text-align: center;
+    font-size:2rem;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type=number]{
+    -moz-appearance: textfield;
+}
+.birdContainer{
+    margin: 100px auto;
 }

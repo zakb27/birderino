@@ -2,6 +2,7 @@ import React, {useRef} from "react";
 import '../styles/nav.css'
 import {NavLink} from "react-router-dom";
 import {RxHamburgerMenu} from "react-icons/rx";
+
 import { IoMdClose } from "react-icons/io";
 const DashNav = () =>{
 
@@ -35,6 +36,7 @@ const DashNav = () =>{
                         <span className={'register'} tabIndex="0">Register</span>
                     </NavLink>
                 </li>
+
             </ul>
         </nav>
     )

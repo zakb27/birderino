@@ -8,7 +8,11 @@ const Dash = () =>{
         <>
             <AdminNav />
             <div className={'flagPage background'}>
-                <p>Flag page</p>
+                <h1>Flagged tickets</h1>
+                <div className="items_container">
+                    <div className="flagged"></div>
+                    <div className="fun"></div>
+                </div>
             </div>
         </>
     )

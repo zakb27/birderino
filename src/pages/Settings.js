@@ -11,10 +11,10 @@ const Settings = () =>{
     const [highContrast,changeContrast] = useState(false)
     const [darkMode,changeDarkMode] = useState(false)
     const [disableAnimations,changeAnimations] = useState(true)
-    const [sliderState,changeSlider] = useState(10)
+    const [sliderState,changeSlider] = useState(17)
+    const [deuter,changeDeuter] = useState(false)
     const teseter = useRef()
     const isAdmin = useSelector((state) => state.user.isAdmin);
-
     const funkyContrast = ()=>{
         changeContrast(!highContrast)
     }
@@ -23,6 +23,9 @@ const Settings = () =>{
     }
     const funkyAnimations = ()=>{
         changeAnimations(!disableAnimations)
+    }
+    const changerColour = () =>{
+        changeDeuter(!deuter)
     }
 
     const handleFontSizeChange = (event) => {
@@ -69,11 +72,18 @@ const Settings = () =>{
                             </button>
                         </div>
                         <div className="disableAnimations">
-                            <h2>Disable Animations</h2>
+                            <h2>Animations</h2>
                             <button onClick={e=>funkyAnimations()}>
                                 {disableAnimations ?  <FaToggleOn style={{ color: disableAnimations ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: disableAnimations ? 'green' : 'black' }} />}
                             </button>
                         </div>
+                        <div className="deuter">
+                            <h2>Deuteranomaly</h2>
+                            <button onClick={e=>changerColour()}>
+                                {deuter ?  <FaToggleOn style={{ color: deuter ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: deuter ? 'green' : 'black' }} />}
+                            </button>
+                        </div>
+
                     </div>
 
                     <div className="fontSlider">
@@ -83,8 +93,8 @@ const Settings = () =>{
                             onChange={handleFontSizeChange}
                             step={1}
                             marks
-                            min={10}
-                            max={18}
+                            min={17}
+                            max={24}
                             valueLabelDisplay="auto"
                         />
                     </div>

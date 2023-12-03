@@ -8,7 +8,7 @@ const Footer = () =>{
                 <FaGithub />
             </a>
 
-            <h4>Made by Zak Brook</h4>
+            <h4>Made by Birderino team</h4>
         </footer>
         </>
     )

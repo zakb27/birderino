@@ -64,7 +64,7 @@ const Register = () =>{
                     type="email"
                     value={confirmEmail}
                     onChange={(e) => setConfirmEmail(e.target.value)}
-                    placeholder={"Email..."}
+                    placeholder={"Confirm Email..."}
                     required
                 />
 
@@ -76,17 +76,17 @@ const Register = () =>{
                 placeholder={"Password..."}
                 required
             />
-                <label>Confirm password:</label>
+                <label>Confirm Password:</label>
                 <input
                     type="password"
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
-                    placeholder={"Password..."}
+                    placeholder={"Confirm Password..."}
 
                     required
                 />
 
-            <label>Associated Code:(Optional)</label>
+            <label>Associate Code(Optional): </label>
             <input
                 type="text"
                 value={code}

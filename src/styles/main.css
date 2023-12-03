@@ -208,17 +208,18 @@ form button{
     font-weight: 500;
     cursor: pointer;
     font-size: 1.5rem;
-    background-color: #344e41;
-    color: #a3b18a;
+    background-color: #a3b18a;
+    color: #344e41;
     width:70%;
     padding:10px 0;
-    border: 2px solid green;
+    border: 2px solid #344e41;
     transition: 0.2s;
     border-radius: 25px;
 }
 
 form button:hover{
-    background-color: #a3b18a;
+    background-color: #344e41;
+    color: #a3b18a;
 }
 form p span{
     color: blue;
@@ -258,11 +259,18 @@ form p span{
 }
 .switches_container div h2{
     /*font-size: 1.2rem;*/
+    width:200px;
 }
 
 .switches_container div svg{
-    height:50px;
-    width:50px;
+    height:55px;
+    width:55px;
+    border-radius: 50px;
+    padding:5px;
+    cursor: pointer;
+}
+.switches_container div svg:hover{
+    background-color: rgba(255, 255, 255, 0.5);
 }
 .switches_container div button{
     background-color: rgba(0,0,0,0);
@@ -391,6 +399,31 @@ form p span{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+.searchPage h1{
+    font-size: 4rem;
+}
+.pageTitle{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+.pageTitle button{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    height:50px;
+
+}
+.pageTitle button svg{
+    width:50px;
+    height:50px;
+}
+.pageTitle button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
 }
 .birdContainer{
     display: flex;
@@ -400,16 +433,30 @@ form p span{
 
 }
 .bird{
-    width:200px;
+    width:100%;
+    max-width: 800px;
+    height:300px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: white;
     border-radius:25px;
+}
 
+.description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
 }
 .bird img{
-    height: 100px;
+    height:300px;
+    width:200px;
+    border-radius: 25px 0 0 25px;
+    object-fit: cover;
 }
 .tester{
     display: block !important;
+}
+.tester2{
+    display: none;
 }

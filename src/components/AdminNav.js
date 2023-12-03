@@ -4,6 +4,8 @@ import {NavLink} from "react-router-dom";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {IoMdClose} from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5";
+import { FaSortDown } from "react-icons/fa";
+
 const AdminNav = () =>{
 
 
@@ -46,6 +48,9 @@ const AdminNav = () =>{
                 </li>
             </ul>
             <div>
+                {/*<NavLink to={'/settings'} activeclassname={'active'} className={'dropdown_links'}>*/}
+                {/*    <span className={'settings'} tabIndex="0"><FaSortDown /></span>*/}
+                {/*</NavLink>*/}
                 <NavLink to={'/settings'} activeclassname={'active'} className={'settings_links'}>
                     <span className={'settings'} tabIndex="0"><IoSettingsSharp /></span>
                 </NavLink>

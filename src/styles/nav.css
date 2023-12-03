@@ -65,7 +65,7 @@
     margin-right: auto;
 }
 
-.settings_links:hover{
+.settings_links:hover,.dropdown_links:hover{
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -75,6 +75,8 @@
     padding:10px 30px;
     background-color: rgba(0,0,0,0) !important;
     width:400px;
+    font-family: 'Poppins', sans-serif;
+
 }
 .navbar div{
     display: flex;
@@ -86,18 +88,22 @@
 }
 .diff{
     text-decoration: none;
-    color: white;
-    padding:15px 25px;
-    border-radius: 25px;
-    border:1px solid white;
-    background-color: #344e41;
+
     text-align: center;
     transition: 0.3s ease-in-out;
+    padding:5px 10px;
+    color: #344e41;
+    background-color: #a3b18a;
+    border: 2px solid #3a5a40;
+    border-radius: 20px;
+    font-size:1.3rem;
+    width:200px;
+    font-family: 'poppins', sans-serif;
 }
 
 .diff:hover{
     background-color: rgba(0,0,0,0);
-    color: black;
+    color: white;
 }
 
 .links{
@@ -106,6 +112,7 @@
     padding:15px;
     border-radius: 15px;
     transition:0.2s ease-in-out;
+    font-size:1.3rem;
 }
 
 .dashes{
@@ -169,6 +176,21 @@ ul svg{
     width:30px;
     display:block;
     margin:0 auto;
+}
+
+
+.dropdown_links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:10px 10px;
+    text-align: center;
+    border-radius: 25px;
+    color: white;
+}
+.dropdown_links .settings svg{
+    margin-top:-20px;
 }
 
 @media only screen and (max-width: 800px) {

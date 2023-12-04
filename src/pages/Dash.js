@@ -4,6 +4,7 @@ import AdminNav from "../components/AdminNav"
 import UserNav from "../components/UserNav"
 import { useDispatch, useSelector } from 'react-redux';
 const Dash = () =>{
+
     const isAdmin = useSelector((state) => state.user.isAdmin);
     console.log(isAdmin)
     return(

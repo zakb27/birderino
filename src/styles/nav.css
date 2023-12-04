@@ -5,7 +5,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     background: rgb(212,163,115);
-    background: linear-gradient(90deg,rgba(204,213,174,1) 0%, rgba(88,129,87,1) 100%);
+    background: linear-gradient(90deg,var(--main5) 0%, var(--main4) 100%);
     align-items: center;
     justify-content: space-between;
     height:100px;
@@ -15,18 +15,18 @@
     font-weight: 400;
     position: fixed;
     /*border-bottom: 2px solid #344e41;*/
-    box-shadow: 0px 4px 5px 0px rgba(52,78,65,1);
+    box-shadow: 0px 4px 5px 0px var(--main1);
     z-index: 50;
 }
 
 
-.adminNav{
+.adminNav,.userNav{
     justify-content: space-between;
 }
 
 .navbar h1{
     font-size: 3rem;
-    color: #344e41;
+    color: var(--main1);
     font-family: 'Poppins', sans-serif;
 
 }
@@ -44,7 +44,7 @@
 
 }
 .adminNav ul ,.userNav ul{
-    margin-left: -130px;
+    margin-left: -160px;
 
 }
 .sign,.register{
@@ -91,16 +91,19 @@
 
     text-align: center;
     transition: 0.3s ease-in-out;
-    padding:5px 10px;
-    color: #344e41;
-    background-color: #a3b18a;
-    border: 2px solid #3a5a40;
+    padding:10px 15px;
+    color: var(--main1);
+    background-color: var(--main2);
+    border: 2px solid var(--main3);
     border-radius: 20px;
     font-size:1.3rem;
-    width:200px;
-    font-family: 'poppins', sans-serif;
-}
 
+    font-family: 'Poppins', sans-serif;
+}
+.signout{
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+}
 .diff:hover{
     background-color: rgba(0,0,0,0);
     color: white;
@@ -113,6 +116,8 @@
     border-radius: 15px;
     transition:0.2s ease-in-out;
     font-size:1.3rem;
+    font-family: 'Poppins', sans-serif;
+
 }
 
 .dashes{
@@ -150,13 +155,14 @@
 .register{
     box-sizing: content-box;
     /*padding:5px 20px;*/
-    color: #344e41;
-    background-color: #a3b18a;
-    border: 2px solid #3a5a40;
-    padding:15px;
-    border-radius: 15px;
+    color: var(--main1);
+    background-color: var(--main2);
+    border: 2px solid var(--main3);
+    padding:10px 15px;
+    border-radius: 20px;
     transition:0.2s ease-in-out;
     font-size:1.3rem;
+    margin-right:-15px;
 }
 
 /*.sign:hover{*/
@@ -196,7 +202,7 @@ ul svg{
     margin-top:-20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1050px) {
     .navbar svg{
         display: block;
     }

@@ -6,44 +6,85 @@ import UserNav from "../components/UserNav";
 import { FaToggleOff } from "react-icons/fa6";
 import { FaToggleOn } from "react-icons/fa6";
 import Slider from "@mui/material/Slider/Slider";
+import {cAnimations, cContrast, cDarkMode, cDeuter, cSliders} from "../tools/AccessActions";
 
 const Settings = () =>{
-    const [highContrast,changeContrast] = useState(false)
-    const [darkMode,changeDarkMode] = useState(false)
-    const [disableAnimations,changeAnimations] = useState(true)
-    const [sliderState,changeSlider] = useState(17)
-    const [deuter,changeDeuter] = useState(false)
+    const dispatch = useDispatch()
+
+    const [highContrast,changeContrast] = useState(useSelector((state) => state.new.highContrast))
+    const [darkMode,changeDarkMode] = useState(useSelector((state) => state.new.darkMode))
+    const [disableAnimations,changeAnimations] = useState(useSelector((state) => state.new.disableAnimations))
+    const [sliderState,changeSlider] = useState(useSelector((state) => state.new.sliderState))
+    const [deuter,changeDeuter] = useState(useSelector((state) => state.new.deuter))
     const teseter = useRef()
     const isAdmin = useSelector((state) => state.user.isAdmin);
-    const funkyContrast = ()=>{
+    const funkyContrast = async()=>{
         changeContrast(!highContrast)
+        dispatch(cContrast(highContrast))
+        console.log(highContrast)
+        if(!highContrast){
+            document.documentElement.style.setProperty('--main1', 'white');
+            document.documentElement.style.setProperty('--main2', 'black');
+            document.documentElement.style.setProperty('--main3', 'white');
+            document.documentElement.style.setProperty('--main4', 'black');
+            document.documentElement.style.setProperty('--main5', 'black');
+        }
+        else{
+            document.documentElement.style.setProperty('--main1', '#344e41');
+            document.documentElement.style.setProperty('--main2', '#a3b18a');
+            document.documentElement.style.setProperty('--main3', '#3a5a40');
+            document.documentElement.style.setProperty('--main4', '#588157');
+            document.documentElement.style.setProperty('--main5', '#CCD5AEFF');
+        }
+
     }
     const funkyDark = ()=>{
+
+        dispatch(cDarkMode(!darkMode))
         changeDarkMode(!darkMode)
+        if(!darkMode){
+            document.documentElement.style.setProperty('--main1', '#e0ece6');
+            document.documentElement.style.setProperty('--main2', '#20231b');
+            document.documentElement.style.setProperty('--main3', '#c6fcce');
+            document.documentElement.style.setProperty('--main4', '#172116');
+            document.documentElement.style.setProperty('--main5', '#1c1f12');
+        }
+        else{
+            document.documentElement.style.setProperty('--main1', '#344e41');
+            document.documentElement.style.setProperty('--main2', '#a3b18a');
+            document.documentElement.style.setProperty('--main3', '#3a5a40');
+            document.documentElement.style.setProperty('--main4', '#588157');
+            document.documentElement.style.setProperty('--main5', '#CCD5AEFF');
+        }
+
     }
     const funkyAnimations = ()=>{
+        dispatch(cAnimations(!disableAnimations))
         changeAnimations(!disableAnimations)
+
+        document.body.classList.toggle('disable-transitions')
+
+
     }
     const changerColour = () =>{
+        dispatch(cDeuter(!deuter))
         changeDeuter(!deuter)
+
     }
 
     const handleFontSizeChange = (event) => {
         const newFontSize = parseInt(event.target.value, 10);
         changeSlider(newFontSize);
         changeFontSize(newFontSize)
+        dispatch(cSliders(newFontSize))
     };
 
     const changeFontSize = (item)=>{
         const rootItem = document.querySelector(":root");
         console.log(rootItem)
         rootItem.style.fontSize = item.toString() + 'px';
+
     }
-    // const globalStyles = {
-    //     fontSize: `${sliderState}rem`,
-    // };
-
-
 
     return(
         <>

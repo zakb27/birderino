@@ -9,14 +9,19 @@ import {MdOutlineArrowBack} from "react-icons/md";
 import {BirdData} from "../tools/BirdData";
 import {useNavigate} from "react-router-dom";
 import { FaPlus,FaMinus } from "react-icons/fa";
-
-const SubmitCard = ({bird}) => {
+import { IoMdClose } from "react-icons/io";
+const SubmitCard = ({bird,updateBirdCount}) => {
     const [isExpanded, setExpanded] = useState(false);
     const [number,changeNumber] = useState(0);
     const navigate = useNavigate();
     const toggleExpand = () => {
         setExpanded(!isExpanded);
     };
+
+    const handleNumberChange = (num)=>{
+        changeNumber(num);
+        updateBirdCount(bird.name, num);
+    }
 
     return (
         <div className={`bird ${isExpanded ? 'expanded' : ''}`}>
@@ -31,10 +36,10 @@ const SubmitCard = ({bird}) => {
                 <div className="submission">
                     <FaMinus onClick={e=>{
                         if(number>0) {
-                            changeNumber(number-1)}
+                            handleNumberChange(number-1)}
                     }}/>
                     <input min={0} max={50} typeof="number"  value={number} onChange={(e) => changeNumber(e.target.value)} />
-                    <FaPlus onClick={e=>changeNumber(number+1)}/>
+                    <FaPlus onClick={e=>handleNumberChange(number+1)}/>
                 </div>
 
             </div>
@@ -48,9 +53,44 @@ const SubmitCard = ({bird}) => {
     );
 };
 const Submit = () =>{
-
+    const navigate = useNavigate();
 
     const isAdmin = useSelector((state) => state.user.isAdmin);
+
+    const [birdCounts, setBirdCounts] = useState({});
+    const [showSubmission, setShowSubmission] = useState(false);
+
+    // Callback function to update bird counts
+    const updateBirdCount = (birdName, count) => {
+        // setBirdCounts((prevCounts) => ({
+        //     ...prevCounts,
+        //     [birdName]: count,
+        // }));
+        setBirdCounts((prevCounts) => {
+            // Create a copy of the previous counts
+            const newCounts = { ...prevCounts };
+
+            // Update the count for the bird
+            newCounts[birdName] = count;
+
+            // Remove entries with a zero count
+            Object.keys(newCounts).forEach((key) => {
+                if (newCounts[key] === 0) {
+                    delete newCounts[key];
+                }
+            });
+
+            return newCounts;
+        });
+    };
+
+    const handleSubmit = (item) => {
+        // You can access the bird counts in the `birdCounts` state
+        console.log('Bird Counts:', birdCounts);
+        setShowSubmission(true);
+        // Perform your submission logic here
+    };
+
     return(
         <>
             {isAdmin ?
@@ -64,11 +104,56 @@ const Submit = () =>{
                 </div>
                 <div className="birdContainer">
                     {BirdData.map((bird, index) => (
-                        <SubmitCard key={index} bird={bird} />
+                        <SubmitCard key={index} bird={bird} updateBirdCount={updateBirdCount} />
                     ))}
 
                 </div>
+                <button onClick={handleSubmit}>Submit</button>
+                {Object.keys(birdCounts).length>0&&
+                    <div className="previewContainer">
+                        <div className="desktopPreview">
+                            <ul>
+                                {Object.entries(birdCounts).map(([birdName, count]) => (
+                                    <li key={birdName}>
+                                        {birdName}: {count}
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <button className={'submitBird'} onClick={e=> {
+                            setShowSubmission(true)
+                        }}>Submit</button>
+                    </div>
+                }
+                {Object.keys(birdCounts).length>0&&
+                <button className={'submitBird2'} onClick={e=> {
+                    handleSubmit(true)
+                }}>Submit</button>
+                }
+                {showSubmission && (
+                    <div className="modal">
+                        <button className={'closeModal'} onClick={e=> {
+                            setShowSubmission(true)
+                        }}><IoMdClose /></button>
+                        <h2>Submit results</h2>
+                        <h4>Is this correct?</h4>
+                        <div className="dropdown">
+                        <ul>
+                            {Object.entries(birdCounts).map(([birdName, count]) => (
+                                <li key={birdName}>
+                                    {birdName}: {count}
+                                </li>
+                            ))}
+                        </ul>
+                            <div className="dorp">
 
+                            </div>
+                        </div>
+                        <button className={'submitBird3'} onClick={e=> {
+                            navigate('/confirm')
+                        }}>Submit</button>
+                    </div>
+                )}
             </div>
         </>
     )

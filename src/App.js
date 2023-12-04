@@ -8,6 +8,7 @@ import Settings from './pages/Settings'
 import DashNav from './components/DashNav'
 import Stats from './pages/Stats'
 import Flagged from './pages/Flagged'
+import Confirm from './pages/Confirm'
 import SearchStats from "./pages/SearchStats";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
@@ -39,6 +40,7 @@ function App() {
                 <Route exact path='/stats' element={AuthCheck()  ? <Stats /> : <DashNav />} />
                 <Route exact path='/flagged' element={AuthCheck()  ? <Flagged /> : <DashNav />} />
                 <Route exact path='/SearchStats' element={AuthCheck()  ? <SearchStats /> : <DashNav />} />
+                <Route exact path='/confirm' element={AuthCheck()  ? <Confirm /> : <DashNav />} />
 
             </Routes>
             </BrowserRouter>

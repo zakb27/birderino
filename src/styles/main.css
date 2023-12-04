@@ -1,8 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600&family=Poppins:wght@300;400;500&display=swap');
 
+:root{
+    --main1: #344e41;
+    --main2: #a3b18a;
+    --main3: #3a5a40;
+    --main4: #588157;
+    --main5: #CCD5AEFF;
+
+    /*--main1: #e0ece6;*/
+    /*--main2: #20231b;*/
+    /*--main3: #c6fcce;*/
+    /*--main4: #172116;*/
+    /*--main5: #1c1f12;*/
+    /*--main1: white;*/
+    /*--main3: white;*/
+    /*--main2: black;*/
+    /*--main4: black;*/
+    /*--main5: black;*/
+}
+.disable-transitions *{
+    transition: none !important; /* Disable transitions */
+ }
 .background{
     background: rgb(212,163,115);
-    background: linear-gradient(90deg,rgba(204,213,174,1) 0%, rgba(88,129,87,1) 100%);
+    background: linear-gradient(90deg,var(--main5) 0%, var(--main4) 100%);
     min-height: 100vh;
     width: 100vw;
 
@@ -52,7 +73,7 @@
 /*}*/
 
 .mission img{
-    box-shadow: #344e41 5px 5px;
+    box-shadow: var(--main1) 5px 5px;
     border-radius: 5px;
     width:60%;
     max-width: 900px;
@@ -60,7 +81,7 @@
     height: auto;
 }
 .mission2 img{
-    box-shadow: #344e41 5px 5px;
+    box-shadow: var(--main1) 5px 5px;
     border-radius: 5px;
     width:60%;
     max-width: 800px;
@@ -70,25 +91,25 @@
 .mission div h1{
     font-size: 3.5rem;
     font-weight:700;
-    color: #344e41;
+    color: var(--main1);
 
 }
 
 .mission div h3{
     font-size:1.5rem;
     font-weight: 400;
-    color: #344e41;
+    color: var(--main1);
 
 
 }
 .mission div button{
-    background: #a3b18a;
+    background: var(--main2);
 
     border-radius: 20px;
-    border: 2px solid #3a5a40;
+    border: 2px solid var(--main3);
     transition: 0.3s;
     cursor: pointer;
-    color: #3a5a40;
+    color: var(--main3);
     padding:5px 100px;
     font-weight:400;
     font-size:1.5rem;
@@ -97,7 +118,7 @@
 
 .mission div button:hover{
     background: rgba(58, 90, 64, 0);
-    color: #3a5a40;
+    color: var(--main3);
 
 }
 
@@ -130,7 +151,7 @@
 
 .birdsections div img{
     border-radius: 5px;
-    box-shadow: #344e41 5px 5px;
+    box-shadow: var(--main1) 5px 5px;
 
     object-fit: cover;
     width:100%;
@@ -139,7 +160,7 @@
 
 .birdsections div h2{
     font-size:2rem;
-    color: #344e41;
+    color: var(--main1);
 }
 
 .homeContainer {
@@ -208,18 +229,18 @@ form button{
     font-weight: 500;
     cursor: pointer;
     font-size: 1.5rem;
-    background-color: #a3b18a;
-    color: #344e41;
+    background-color: var(--main2);
+    color: var(--main1);
     width:70%;
     padding:10px 0;
-    border: 2px solid #344e41;
+    border: 2px solid var(--main1);
     transition: 0.2s;
     border-radius: 25px;
 }
 
 form button:hover{
-    background-color: #344e41;
-    color: #a3b18a;
+    background-color: var(--main1);
+    color: var(--main2);
 }
 form p span{
     color: blue;
@@ -290,6 +311,7 @@ form p span{
 }
 
 .searchContainer h1{
+    color: var(--main1);
     font-size: 4rem;
     font-weight: 600;
 }
@@ -329,7 +351,7 @@ form p span{
     padding:10px 50px;
     border-radius: 20px;
     border:2px solid white;
-    /*background-color: #344e41;*/
+    /*background-color: var(--main1);*/
     color: black;
     font-size: 1.2rem;
     cursor: pointer;
@@ -405,6 +427,7 @@ form p span{
     margin: 100px auto;
     display: flex;
     flex-direction: row;
+    color: var(--main1);
 }
 .pageTitle button{
     background-color: rgba(0,0,0,0);
@@ -417,6 +440,7 @@ form p span{
 .pageTitle button svg{
     width:50px;
     height:50px;
+    color: var(--main1);
 }
 .pageTitle button:hover{
     background-color: rgba(255, 255, 255, 0.5);
@@ -510,7 +534,7 @@ form p span{
 }
 .seen{
     font-size:2rem;
-    color: #588157;
+    color: var(--main4);
     margin:0;
     padding:0;
     position: absolute;
@@ -616,4 +640,139 @@ input[type=number]{
 }
 .birdContainer{
     margin: 100px auto;
+}
+
+.submitBird, .submitBird2, .submitBird3{
+    /*margin: 0 auto;*/
+    padding:10px;
+    border:2px solid var(--main5);
+    border-radius: 0 0 25px 25px;
+    color: var(--main5);
+    cursor: pointer;
+    margin:0;
+    position: relative;
+    width:300px;
+    background-color: var(--main1);
+}
+.previewContainer{
+    position: fixed;
+    top:120px;
+    right:15px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.desktopPreview{
+    display: flex;
+    background-color: white;
+    /*height:200px;*/
+    max-height:200px;
+    width:300px;
+
+    overflow: scroll;
+    border-radius: 25px 25px 0 0;
+    border-right:2px solid var(--main5);
+    border-left:2px solid var(--main5);
+    border-top:2px solid var(--main5);
+}
+
+.desktopPreview ul{
+    list-style: none;
+
+}
+
+.modal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: fixed;
+    top:100px;
+    left:5vw;
+    right:5vw;
+    border-radius: 20px;
+    width:90vw;
+    height:88vh;
+    top:10vh;
+    bottom:5vh;
+    background-color: white;
+    box-shadow: 0px 0px 15px 300px rgba(0, 0, 0, 0.9);
+    z-index: 300;
+    overflow: scroll;
+}
+.closeModal{
+    position: fixed;
+    top:10vh;
+    right:5vw;
+    background-color: rgba(189, 189, 189, 0.6);
+    border-radius: 0 20px 0 20px ;
+    border:none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+}
+.closeModal svg{
+    color: black;
+    width:50px;
+    height:50px;
+
+}
+.closeModal:hover{
+    background-color: rgb(189, 189, 189);
+}
+.submitBird2{
+    display: none;
+}
+.modal h2{
+    font-size:3rem;
+    margin:15px ;
+}
+.modal h4{
+    font-size: 2rem;
+    margin:15px;
+}
+.dropdown{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-bottom:100px;
+
+}
+.dropdown ul{
+    background-color: #a3b18a;
+    width:400px;
+    height:400px;
+    overflow: scroll;
+}
+.dorp{
+    width:400px;
+    height:400px;
+    background-color: #344e41;
+}
+.submitBird3{
+    position: fixed;
+    bottom:40px;
+    width:80%;
+    left:10%;
+    right:10%;
+    border-radius: 25px;
+
+
+}
+@media only screen and (max-width: 1050px) {
+    .previewContainer{
+        display: none;
+    }
+    .submitBird2{
+        display: block;
+        position: fixed;
+        bottom:10px;
+        width:80%;
+        left:10%;
+        right:10%;
+        border-radius: 25px;
+        font-size: 1.2rem;
+
+    }
 }

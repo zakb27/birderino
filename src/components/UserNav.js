@@ -9,11 +9,16 @@ const UserNav = () =>{
     const tester = useRef();
     const openMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='flex'
+        // tester.current.style.display='flex'
+        tester.current.classList.add('show-menu');
+
     }
     const closeMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='none'
+        // tester.current.style.display='none'
+        tester.current.classList.remove('show-menu');
+
+
     }
 
 
@@ -22,7 +27,7 @@ const UserNav = () =>{
             <NavLink to={'/dash'} className={'logo'}>
                 <h1>Birderino</h1>
             </NavLink>
-            <RxHamburgerMenu onClick={e=>openMenu} />
+            <RxHamburgerMenu onClick={e=>openMenu()} />
             <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
                 <li role="menuitem">
@@ -41,8 +46,18 @@ const UserNav = () =>{
                         <span className={'submit'}  tabIndex="0">Submit results</span>
                     </NavLink>
                 </li>
+                <li role="menuitem" tabIndex="0" className={'hide'}>
+                    <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
+                        <span tabIndex="0">Settings</span>
+                    </NavLink>
+                </li>
+                <li role="menuitem" tabIndex="0" className={'hide'}>
+                    <NavLink to={'/'} activeclassname={'active'} className={'links'}>
+                        <span tabIndex="0">Sign out</span>
+                    </NavLink>
+                </li>
             </ul>
-            <div>
+            <div className={'hide2'}>
                 {/*<NavLink to={'/settings'} activeclassname={'active'} className={'dropdown_links'}>*/}
                 {/*    <span className={'settings'} tabIndex="0"><FaSortDown /></span>*/}
                 {/*</NavLink>*/}

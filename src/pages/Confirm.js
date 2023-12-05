@@ -3,8 +3,9 @@ import React from "react";
 import AdminNav from "../components/AdminNav"
 import UserNav from "../components/UserNav"
 import { useDispatch, useSelector } from 'react-redux';
+import {useNavigate} from "react-router-dom";
 const Confirm = () =>{
-
+    const navigate = useNavigate()
     const isAdmin = useSelector((state) => state.user.isAdmin);
     console.log(isAdmin)
     return(
@@ -14,8 +15,11 @@ const Confirm = () =>{
                 :
                 (<UserNav />)
             }
-            <div className={'background'}>
-                <h1 style={{'margin':'200px auto'}}>Submission complete</h1>
+            <div className={'confirmPage background'}>
+                <div className="confirmContainer">
+                    <h1>Submission complete</h1>
+                    <button className={'submitBird'} onClick={e=>navigate('/dash')}> Return -></button>
+                </div>
             </div>
         </>
     )

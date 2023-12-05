@@ -10,11 +10,13 @@ const DashNav = () =>{
     const tester = useRef();
     const openMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='flex'
+        // tester.current.style.display='flex'
+        tester.current.classList.add('show-menu');
     }
     const closeMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='none'
+        // tester.current.style.display='none'
+        tester.current.classList.remove('show-menu');
     }
 
     return(

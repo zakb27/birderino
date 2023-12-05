@@ -15,14 +15,18 @@ const Dash = () =>{
                 (<UserNav />)
             }
             <div className={'dashPage background'}>
-                <section className="mission mission2">
+                <h1>Bird of the day</h1>
+                <section className="mission2">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Eurasian_blue_tit_Lancashire.jpg/440px-Eurasian_blue_tit_Lancashire.jpg" alt="Blue tit bird"/>
+
                     <div>
-                        <h1>Bird of the day</h1>
-                        <h3>Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
-                            Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum.</h3>
+                        <h1>The Blue Tit</h1>
+                        <h3>The blue tit (Cyanistes caeruleus) is a common garden bird in the UK. It has bright blue
+                            and yellow plumage with a distinctive white face. Blue tits are active and acrobatic,
+                            often seen hanging upside down to feed. They have a varied diet that includes insects,
+                            seeds, and suet.</h3>
+                        <h5>Total count of 321 today!</h5>
                     </div>
-                    <img src="https://images.unsplash.com/photo-1444464666168-49d633b86797?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Bird sat on a branch"/>
                 </section>
             </div>
         </>

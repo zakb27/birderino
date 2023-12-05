@@ -10,6 +10,7 @@ import {BirdData} from "../tools/BirdData";
 import {useNavigate} from "react-router-dom";
 import { FaPlus,FaMinus } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
+import GoogleMapReact from 'google-map-react';
 const SubmitCard = ({bird,updateBirdCount}) => {
     const [isExpanded, setExpanded] = useState(false);
     const [number,changeNumber] = useState(0);
@@ -52,6 +53,8 @@ const SubmitCard = ({bird,updateBirdCount}) => {
         </div>
     );
 };
+
+const AnyReactComponent = ({ text }) => <div>{text}</div>;
 const Submit = () =>{
     const navigate = useNavigate();
 
@@ -60,6 +63,13 @@ const Submit = () =>{
     const [birdCounts, setBirdCounts] = useState({});
     const [showSubmission, setShowSubmission] = useState(false);
 
+    const defaultProps = {
+        center: {
+            lat: 10.99835602,
+            lng: 77.01502627
+        },
+        zoom: 11
+    };
     // Callback function to update bird counts
     const updateBirdCount = (birdName, count) => {
         // setBirdCounts((prevCounts) => ({
@@ -133,7 +143,7 @@ const Submit = () =>{
                 {showSubmission && (
                     <div className="modal">
                         <button className={'closeModal'} onClick={e=> {
-                            setShowSubmission(true)
+                            setShowSubmission(false)
                         }}><IoMdClose /></button>
                         <h2>Submit results</h2>
                         <h4>Is this correct?</h4>
@@ -145,9 +155,12 @@ const Submit = () =>{
                                 </li>
                             ))}
                         </ul>
-                            <div className="dorp">
+                            <div className="dorp" style={{borderRadius: "25px"}}>
 
-                            </div>
+                                    <div id="my-map-display" style={{height:"100%", width: "100%", borderRadius: "25px"}}>
+                                        <iframe style={{height:"100%", width: "100%", borderRadius: "25px",border:'0'}}
+                                                src="https://www.google.com/maps/embed/v1/place?q=United+Kingdom&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+                                    </div></div>
                         </div>
                         <button className={'submitBird3'} onClick={e=> {
                             navigate('/confirm')

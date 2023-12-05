@@ -72,7 +72,7 @@
 .logo{
     text-decoration: none;
     color: white;
-    padding:10px 30px;
+    padding:10px 10px;
     background-color: rgba(0,0,0,0) !important;
     width:400px;
     font-family: 'Poppins', sans-serif;
@@ -155,9 +155,9 @@
 .register{
     box-sizing: content-box;
     /*padding:5px 20px;*/
-    color: var(--main1);
-    background-color: var(--main2);
-    border: 2px solid var(--main3);
+    color: var(--main2);
+    background: var(--main3);
+    border: 2px solid var(--main4);
     padding:10px 15px;
     border-radius: 20px;
     transition:0.2s ease-in-out;
@@ -169,20 +169,25 @@
 /*    border-bottom:2px solid #a3b18a;*/
 /*}*/
 .register:hover{
-    background-color: rgba(0,0,0,0);
-    color: white;
+    background-color: var(--main2);
+    color: var(--main3);
 }
 
 .navbar svg{
     display: none;
-    width:40px;
-    height:50px;
+    min-width:60px !important;
+    min-height:60px !important;
+    /*margin-right:35px !important;*/
+    color: white;
+    text-align: center;
 }
 ul svg{
     display: none;
 }
 .settings svg{
-    width:30px;
+    min-width:30px !important;
+    min-height:50px !important;
+    /*padding:10px;*/
     display:block;
     margin:0 auto;
 }
@@ -201,14 +206,19 @@ ul svg{
 .dropdown_links .settings svg{
     margin-top:-20px;
 }
-
+.hide{
+    display: none;
+}
+.hide2{
+    display: block;
+}
 @media only screen and (max-width: 1050px) {
     .navbar svg{
         display: block;
     }
     .navbar ul{
         display: none;
-        background-color: #344e41;
+        background-color: var(--main4);
         width:100vw;
         height:100vh;
         top:0;
@@ -219,27 +229,55 @@ ul svg{
         align-items: flex-end;
         justify-content: flex-start;
     }
-    .dashes{
-        padding:15px 25px !important;
 
+    .navbar ul.show-menu{
+        display: flex;
     }
 
+
+
+    /*.dashes{*/
+    /*    padding:15px 25px !important;*/
+    /*}*/
+    .links:hover{
+        background-color: var(--main4);
+    }
     .links span{
+        padding:45px 25px !important;
+        font-size: 2.5rem;
+    }
+    .dashes span{
         padding:45px 25px !important;
         font-size: 2.5rem;
     }
     .register{
         padding:0 ;
-
         background-color: rgba(0,0,0,0);
         border:none;
         color: white;
     }
+    .sign,.register{
+        font-size: 2rem;
+        padding:0 ;
+    }
+
     ul svg{
         display: block;
         width:50px;
         height:50px;
         margin:25px;
     }
-
+    .navbar ul li{
+        margin: 10px 0;
+    }
+    .active{
+        background-color: var(--main4);
+        color: white;
+    }
+    .hide{
+        display: block;
+    }
+    .hide2{
+        display: none !important;
+    }
 }

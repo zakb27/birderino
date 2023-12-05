@@ -43,10 +43,24 @@
     background: rgba(255, 255, 255, 0.10);
     border-radius: 15px;
 }
-.mission2{
-    margin-top: 150px;
+
+
+.dashPage{
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
+    align-items: center;
+    padding-top:80px;
+}
+.dashPage h1{
+    font-size:4rem;
+    color: var(--main3);
+
+}
+
+
+.mission2{
+    display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
@@ -55,6 +69,18 @@
     background: rgba(255, 255, 255, 0.10);
     border-radius: 15px;
 }
+.mission2 h3,.mission h5{
+    width:100%;
+}
+.mission2 h3{
+    font-size: 1.7rem;
+    color: var(--main3);
+}
+.mission2 h5{
+    font-size: 1.5rem;
+    color: #b93737;
+}
+
 .mission div{
     display: flex;
     flex-direction: column;
@@ -63,8 +89,10 @@
     width:30%;
 }
 .mission2 div{
-    width:60%;
+    width:100%;
     text-align: center;
+    max-width:1500px;
+
 
 }
 /*img{*/
@@ -83,7 +111,7 @@
 .mission2 img{
     box-shadow: var(--main1) 5px 5px;
     border-radius: 5px;
-    width:60%;
+    width:100%;
     max-width: 800px;
     min-width:350px;
     height: auto;
@@ -103,13 +131,13 @@
 
 }
 .mission div button{
-    background: var(--main2);
+    background: var(--main3);
 
     border-radius: 20px;
-    border: 2px solid var(--main3);
+    border: 2px solid var(--main4);
     transition: 0.3s;
     cursor: pointer;
-    color: var(--main3);
+    color: var(--main2);
     padding:5px 100px;
     font-weight:400;
     font-size:1.5rem;
@@ -117,7 +145,10 @@
 }
 
 .mission div button:hover{
-    background: rgba(58, 90, 64, 0);
+    /*background: rgba(58, 90, 64, 0);*/
+    /*color: var(--main3);*/
+    /*border: 2px solid var(--main1);*/
+    background-color: var(--main2);
     color: var(--main3);
 
 }
@@ -229,18 +260,18 @@ form button{
     font-weight: 500;
     cursor: pointer;
     font-size: 1.5rem;
-    background-color: var(--main2);
-    color: var(--main1);
+    color: var(--main2);
+    background: var(--main3);
+    border: 2px solid var(--main4);
     width:70%;
     padding:10px 0;
-    border: 2px solid var(--main1);
     transition: 0.2s;
     border-radius: 25px;
 }
 
 form button:hover{
-    background-color: var(--main1);
-    color: var(--main2);
+    background-color: var(--main2);
+    color: var(--main3);
 }
 form p span{
     color: blue;
@@ -267,15 +298,17 @@ form p span{
     font-size: 2.5rem;
     font-weight: 600;
 }
-
+.switches_container{
+    width:100%;
+    max-width: 400px;
+}
 .switches_container div{
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 400px;
+    width:100%;
     align-items: center;
     justify-content: space-between;
-    gap:100px;
     border-bottom: 4px solid black;
 }
 .switches_container div h2{
@@ -358,21 +391,49 @@ form p span{
 }
 
 .charts{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
     gap:15px;
     width:100%;
-    margin-top: 50px;
+    margin: 50px auto;
 
+    height:80vh;
 }
 
 .rankings{
-    grid-column: 2/3;
-    grid-row:1/3;
-    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 25px;
+    width:400px;
+}
+.heatmap{
+    background-color: rgba(255, 255, 255, 0);
+    padding:100px;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    align-items: center;
+}
 
+.rankings h2{
+    font-size: 3rem;
+    color: var(--main3);
+
+}
+
+.heatmap img{
+    max-height:700px;
+    min-width:200px;
+    width:100%;
+}
+.birds_rank{
+    display: flex;
+    flex-direction: row;
+    gap:10px;
+}
+.birds_rank h3{
+    width:100px;
 }
 .test1{
     grid-column: 1/2;
@@ -395,26 +456,14 @@ form p span{
     border-radius: 25px;
 
 }
-.heatmap{
-    grid-column: 3/5;
-    grid-row:1/4;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 25px;
 
-}
 .piChart img{
     height:200px;
     width:100%;
 }
-.heatmap img{
-    height:700px;
-    width:100%;
-}
-
-
 
 .searchPage{
-    padding-top:75px;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -424,10 +473,15 @@ form p span{
     font-size: 4rem;
 }
 .pageTitle{
-    margin: 100px auto;
+    margin: 80px auto -50px auto;
     display: flex;
+    align-items: center;
+    justify-content: center;
     flex-direction: row;
     color: var(--main1);
+}
+.pageTitle h1{
+    font-size:4rem;
 }
 .pageTitle button{
     background-color: rgba(0,0,0,0);
@@ -642,6 +696,7 @@ input[type=number]{
     margin: 100px auto;
 }
 
+
 .submitBird, .submitBird2, .submitBird3{
     /*margin: 0 auto;*/
     padding:10px;
@@ -737,14 +792,23 @@ input[type=number]{
     align-items: center;
     flex-wrap: wrap;
     padding-bottom:100px;
+    gap:15px;
 
 }
 .dropdown ul{
-    background-color: #a3b18a;
+    background-color: var(--main5);
+    border-radius: 25px;
     width:400px;
     height:400px;
     overflow: scroll;
+    list-style: none;
 }
+.dropdown ul li{
+    font-size: 2rem;
+    font-weight: 500;
+    margin-left:-25px;
+}
+
 .dorp{
     width:400px;
     height:400px;
@@ -761,14 +825,14 @@ input[type=number]{
 
 }
 .flagPage{
-    padding-top:100px;
+    padding-top:80px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .flagPage h1{
-    font-size: 3rem;
+    font-size: 4rem;
     color:var(--main1);
 }
 .items_container{
@@ -784,23 +848,155 @@ input[type=number]{
 }
 .flagged_container{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 15px;
     background-color: var(--main2);
     width:100%;
-    min-height:100px;
+    min-height:50px;
 }
 .checked_container{
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: var(--main4);
     width:100%;
-    min-height:100px;
+    min-height:50px;
+    padding: 0px 15px;
+
+}
+
+.confirmContainer{
+    margin: 200px auto;
+    width:700px;
+    height:200px;
+    background-color: var(--main3);
+    text-align: center;
+    position: relative;
+    border-radius: 25px;
+    border: 3px solid var(--main2)
+}
+
+.confirmContainer h1{
+    font-size: 3rem;
+    height:60%;
+    font-weight:600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:0;
+    margin:0;
+    color: var(--main5);
+}
+
+.confirmContainer button{
+    width:100%;
+    height:40%;
+    font-size:2.5rem;
+    font-weight:500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom:0;
+    left:0;
+    border: none;
+    border-top:2px solid var(--main5)
+}
+
+.flag_container_container,.review_container_container{
+    width: 100%;
+    height: 60vh;
+    overflow: scroll;
+}
+.flagged_container button,.checked_container button{
+    background-color: rgba(0,0,0,0);
+    padding:5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border:none;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border-radius: 35px;
+}
+.flagged_container button:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+
+}
+.checked_container button:hover{
+    background-color: rgba(255, 255, 255, 0.4);
+}
+.flagged_container button svg, .checked_container button svg{
+    width:50px;
+    height:50px;
+}
+.flagg,.reviewd{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /*flex-wrap: wrap;*/
+    gap:25px;
+    text-align: center;
+    background-color: var(--main1);
+    color: var(--main5);
+    border-bottom: 2px solid var(--main2);
+    padding:0px 15px;
+
+}
+.reviewd{
+    justify-content: space-between;
+}
+.butContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:10px;
+}
+.approve,.reject{
+    background-color: #4baf4b;
+    color: #0c280b;
+    padding:10px 35px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 25px;
+    width:200px;
+
+}
+.approveDiff{
+    background-color: #4baf4b;
+    color: #0c280b;
+    padding:10px 35px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    border: 2px solid white;
+    cursor: pointer;
+    border-radius: 25px;
+    margin:10px;
+}
+.reject{
+    background-color: #d53b3b;
+    color: #421111;
 }
 
 
+@media only screen and (max-width: 750px) {
+    .flagg,.reviewd{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 
 @media only screen and (max-width: 1050px) {
     .previewContainer{
         display: none;
     }
+
     .submitBird2{
         display: block;
         position: fixed;
@@ -811,5 +1007,73 @@ input[type=number]{
         border-radius: 25px;
         font-size: 1.2rem;
 
+    }
+    .expanded{
+        height:700px;
+        max-width:90vw;
+    }
+    .titles h1{
+        font-size: 2rem !important;
+    }
+    .expanded img{
+        max-width:45vw;
+        height:50%;
+        border-radius: 25px 0 0 0;
+    }
+    .titles .left{
+        margin-left: 10px;
+    }
+    .expanded .remaining{
+        display: inline;
+        max-width:45vw;
+        overflow-wrap: break-word;
+        hyphens: auto;
+    }
+    .expanded #bigSummary{
+        position: absolute;
+        left:0;
+        top:50%;
+    }
+    .bird button svg {
+        width: 40px;
+        height: 40px;
+
+    }
+    .bird button{
+        bottom:5px;
+        right:5px;
+    }
+    .expanded .seen{
+        position: absolute;
+        left:5px;
+        bottom:5px;
+    }
+    .expanded .submission{
+        position: absolute;
+        align-items: center;
+        bottom:10px;
+        width:300px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+
+
+    .expanded .submission svg{
+        width:50px;
+        height:60px;
+        padding:10px;
+
+    }
+    .expanded .submission svg:first-child{
+        border-radius: 20px 0 0 20px;
+    }
+    .expanded .submission svg:last-child{
+        border-radius: 0 20px  20px 0;
+    }
+
+    .expanded .submission input{
+        width:110px;
+        height:60px;
+        font-size:3rem;
     }
 }

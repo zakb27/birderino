@@ -82,37 +82,38 @@ const Stats = () =>{
                 </div>
 
                 <div className="charts">
-                    <div className="rankings">
-                        <h2>Rankings</h2>
-                        <div className="birds">
-                            <h3>Crow</h3>
-                            <h3>353</h3>
-                        </div>
-                        <div className="birds">
-                            <h3>Crow</h3>
-                            <h3>353</h3>
-                        </div>
-                        <div className="birds">
-                            <h3>Crow</h3>
-                            <h3>353</h3>
-                        </div>
-                        <div className="birds">
-                            <h3>Crow</h3>
-                            <h3>353</h3>
-                        </div>
-                        <div className="birds">
-                            <h3>Crow</h3>
-                            <h3>353</h3>
-                        </div>
-                    </div>
-                    <div className="test1"></div>
-                    <div className="test2"></div>
-                    <div className="piChart">
-                        <h2>Distribution of top birds</h2>
-                        <img src={image2} alt="Pi Chart of top birds"/>
-                    </div>
+
+                    {/*<div className="test1"></div>*/}
+                    {/*<div className="test2"></div>*/}
+                    {/*<div className="piChart">*/}
+                    {/*    <h2>Distribution of top birds</h2>*/}
+                    {/*    <img src={image2} alt="Pi Chart of top birds"/>*/}
+                    {/*</div>*/}
+
                     <div className="heatmap">
-                        <h2>Hotspots right now!</h2>
+                        <div className="rankings">
+                            <h2>Rankings and heatmap</h2>
+                            <div className="birds_rank">
+                                <h3>Crow: </h3>
+                                <h3>4567</h3>
+                            </div>
+                            <div className="birds_rank">
+                                <h3>Magpie: </h3>
+                                <h3>3432</h3>
+                            </div>
+                            <div className="birds_rank">
+                                <h3>Robin: </h3>
+                                <h3>2344</h3>
+                            </div>
+                            <div className="birds_rank">
+                                <h3>Seagull: </h3>
+                                <h3>2333</h3>
+                            </div>
+                            <div className="birds_rank">
+                                <h3>Pigeon: </h3>
+                                <h3>1642</h3>
+                            </div>
+                        </div>
                         <img src={image} alt="Heatmap of the UK"/>
                     </div>
                 </div>

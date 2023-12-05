@@ -10,13 +10,19 @@ const AdminNav = () =>{
 
 
     const tester = useRef();
+
+
     const openMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='flex'
+        // tester.current.style.display='flex'
+        tester.current.classList.add('show-menu');
+
     }
     const closeMenu = ()=>{
         // tester.current.style.display='block';
-        tester.current.style.display='none'
+        // tester.current.style.display='none'
+        tester.current.classList.remove('show-menu');
+
     }
 
     return(
@@ -43,14 +49,18 @@ const AdminNav = () =>{
                         <span className={'flagged'}  tabIndex="0">Flagged tickets</span>
                     </NavLink>
                 </li>
-                {/*<li role="menuitem">*/}
-
-                {/*</li>*/}
+                <li role="menuitem" className={'hide'}>
+                    <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
+                        <span tabIndex="0">Settings</span>
+                    </NavLink>
+                </li>
+                <li role="menuitem" className={'hide'}>
+                    <NavLink to={'/'} activeclassname={'active'} className={'links'}>
+                        <span tabIndex="0">Sign out</span>
+                    </NavLink>
+                </li>
             </ul>
-            <div>
-                {/*<NavLink to={'/settings'} activeclassname={'active'} className={'dropdown_links'}>*/}
-                {/*    <span className={'settings'} tabIndex="0"><FaSortDown /></span>*/}
-                {/*</NavLink>*/}
+            <div className={'hide2'}>
                 <NavLink to={'/settings'} activeclassname={'active'} className={'settings_links'}>
                     <span className={'settings'} tabIndex="0"><IoSettingsSharp /></span>
                 </NavLink>

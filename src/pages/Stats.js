@@ -13,41 +13,82 @@ const Stats = () =>{
     const items = [
         {
             id: 0,
-            name: 'Crow'
+            name: 'European Robin'
         },
         {
             id: 1,
-            name: 'Robin'
+            name: 'Blue Tit'
         },
         {
             id: 2,
-            name: 'Magpie'
+            name: 'Blackbird'
         },
         {
             id: 3,
-            name: 'Seagull'
+            name: 'Goldfinch'
         },
         {
             id: 4,
-            name: 'Pigeon'
+            name: 'Peregrine Falcon'
+        },
+        {
+            id: 5,
+            name: 'Common Kestrel'
+        },
+        {
+            id: 6,
+            name: 'Wood Pigeon'
+        },
+        {
+            id: 7,
+            name: 'Great Tit'
+        },
+        {
+            id: 8,
+            name: 'Long-tailed Tit'
+        },
+        {
+            id: 9,
+            name: 'Collared Dove'
+        },
+        {
+            id: 10,
+            name: 'Magpie'
+        },
+        {
+            id: 11,
+            name: 'Chaffinch'
+        },
+        {
+            id: 12,
+            name: 'Wren'
+        },
+        {
+            id: 13,
+            name: 'Nuthatch'
         }
     ]
     const handleOnSearch = (string, results) => {
+        console.log(string);
+        // navigate('/SearchStats',{item:string});
     }
 
     const handleOnHover = (result) => {
     }
 
     const handleOnSelect = (item) => {
+        console.log(item.name);
+        navigate('/SearchStats',{ state: {item:item.name}});
     }
 
     const handleOnFocus = () => {
+        console.log('test')
     }
 
     const formatResult = (item) => {
         return (
             <>
-                <span style={{ display: 'block', textAlign: 'left'}}>{item.name}</span>
+                <span style={{ display: 'block', textAlign: 'left',cursor:'pointer'}}>{item.name}</span>
             </>
         )
     }
@@ -74,7 +115,7 @@ const Stats = () =>{
                             formatResult={formatResult}
                         />
                     </div>
-                    <button className={'viewAllButton'} onClick={e=>navigate('/SearchStats')}>
+                    <button className={'viewAllButton'} onClick={e=>navigate('/SearchStats',{ state: {item:''}})} >
                         View All
                     </button>
 

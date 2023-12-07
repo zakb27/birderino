@@ -7,7 +7,8 @@ import { FaToggleOff } from "react-icons/fa6";
 import { FaToggleOn } from "react-icons/fa6";
 import Slider from "@mui/material/Slider/Slider";
 import {cAnimations, cContrast, cDarkMode, cDeuter, cSliders} from "../tools/AccessActions";
-
+import {FaExpand, FaMinus, FaPlus} from "react-icons/fa";
+import {FiMinimize} from "react-icons/fi";
 const Settings = () =>{
     const dispatch = useDispatch()
 
@@ -71,6 +72,23 @@ const Settings = () =>{
         changeDeuter(!deuter)
 
     }
+    const handleUpChange = () =>{
+        if(sliderState===23){
+            return;
+        }
+        changeSlider(sliderState+3);
+        changeFontSize(sliderState+3)
+        dispatch(cSliders(sliderState+3))
+
+    }
+    const handleDownChange = () =>{
+        if(sliderState===17){
+            return;
+        }
+        changeSlider(sliderState-3);
+        changeFontSize(sliderState-3)
+        dispatch(cSliders(sliderState-3))
+    }
 
     const handleFontSizeChange = (event) => {
         const newFontSize = parseInt(event.target.value, 10);
@@ -128,16 +146,27 @@ const Settings = () =>{
                     </div>
 
                     <div className="fontSlider">
+                        <button tabIndex={0} onClick={e=>handleDownChange()}>
+                            <FaMinus />
+                        </button>
                         <Slider
                             aria-label="Small steps"
                             value = {sliderState}
                             onChange={handleFontSizeChange}
-                            step={1}
+                            step={3}
                             marks
                             min={17}
-                            max={24}
-                            valueLabelDisplay="auto"
+                            max={23}
+                            valueLabelDisplay="none"
                         />
+                        <button tabIndex={0} onClick={e=>handleUpChange()}>
+                            <FaPlus />
+                        </button>
+                    </div>
+                    <div className="showFont">
+                        <p>A</p>
+                        <p>A</p>
+                        <p>A</p>
                     </div>
 
                 </div>

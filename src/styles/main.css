@@ -292,6 +292,7 @@ form p span{
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    position: relative;
 }
 
 .settingsTitle{
@@ -333,9 +334,66 @@ form p span{
 }
 
 .fontSlider{
-    width:300px;
+    position: absolute;
+    bottom:100px;
+    max-width:400px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap:20px;
+}
+.fontSlider button{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding:10px;
+    border:2px solid black;
+    border-radius: 20px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+}
+.fontSlider button svg{
+    width:30px;
+    height:30px;
+}
+.css-187mznn-MuiSlider-root{
+    color: black;
+}
+.css-1tfve6q-MuiSlider-mark{
+    color: #000000;
+    height:10px;
+    padding:6px 2px;
 }
 
+.showFont{
+    position: absolute;
+    bottom:50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width:270px;
+}
+.showFont p{
+    font-weight: 600;
+}
+.showFont p:nth-child(1){
+    font-size: 17px;
+}
+.showFont p:nth-child(2){
+    font-size: 20px;
+}
+.showFont p:nth-child(3){
+    font-size: 23px;
+}
+.fontSlider button:hover{
+    background-color: white;
+}
 .searchContainer{
     margin-top: 80px;
     display: flex;
@@ -467,11 +525,11 @@ form p span{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 .searchPage h1{
     font-size: 4rem;
 }
+
 .pageTitle{
     margin: 80px auto -50px auto;
     display: flex;
@@ -479,6 +537,9 @@ form p span{
     justify-content: center;
     flex-direction: row;
     color: var(--main1);
+}
+.searchPage .pageTitle{
+    margin: 80px auto -100px auto;
 }
 .pageTitle h1{
     font-size:4rem;

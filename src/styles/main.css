@@ -49,12 +49,12 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top:80px;
+    padding-top:100px;
 }
 .dashPage h1{
     font-size:4rem;
-    color: var(--main3);
-
+    color: var(--main1);
+    margin-bottom:50px;
 }
 
 
@@ -142,6 +142,7 @@
     font-weight:400;
     font-size:1.5rem;
     font-family: 'Poppins', sans-serif;
+    width:100%;
 }
 
 .mission div button:hover{
@@ -471,6 +472,7 @@ form p span{
     display: flex;
     flex-direction: row;
     /*flex-wrap: wrap;*/
+    overflow: hidden;
     align-items: center;
 }
 

@@ -8,6 +8,7 @@ import image from '../assets/MapChart_Map.png'
 import image2 from '../assets/png.png'
 import { ReactSearchAutocomplete } from 'react-search-autocomplete'
 import {useNavigate} from "react-router-dom";
+import Footer from "../components/Footer";
 const Stats = () =>{
     const navigate = useNavigate();
     const items = [
@@ -160,6 +161,7 @@ const Stats = () =>{
                 </div>
 
             </div>
+            <Footer />
         </>
     )
 }

@@ -12,7 +12,8 @@ import Confirm from './pages/Confirm'
 import SearchStats from "./pages/SearchStats";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useSelector } from 'react-redux';
-
+import Guide from "./pages/Guide";
+import Footer from "./components/Footer";
 
 function App() {
     const AuthCheck = () => {
@@ -34,16 +35,23 @@ function App() {
                     path='/register'
                     element={<Register />}
                 />
-                <Route exact path='/dash' element={AuthCheck() ? <Dash /> : <DashNav />} />
-                <Route exact path='/submit' element={AuthCheck()  ? <Submit /> : <DashNav />} />
-                <Route exact path='/settings' element={AuthCheck()  ? <Settings /> : <DashNav />} />
-                <Route exact path='/stats' element={AuthCheck()  ? <Stats /> : <DashNav />} />
-                <Route exact path='/flagged' element={AuthCheck()  ? <Flagged /> : <DashNav />} />
-                <Route exact path='/SearchStats' element={AuthCheck()  ? <SearchStats /> : <DashNav />} />
-                <Route exact path='/confirm' element={AuthCheck()  ? <Confirm /> : <DashNav />} />
+            <Route
+                exact
+                path='/guide'
+                element={<Guide />}
+            />
+            <Route exact path='/settings' element={<Settings />} />
+            <Route exact path='/dash' element={AuthCheck() ? <Dash /> : <Home />} />
+                <Route exact path='/submit' element={AuthCheck()  ? <Submit /> : <Home />} />
+                <Route exact path='/stats' element={AuthCheck()  ? <Stats /> : <Home />} />
+                <Route exact path='/flagged' element={AuthCheck()  ? <Flagged /> : <Home />} />
+                <Route exact path='/SearchStats' element={AuthCheck()  ? <SearchStats /> : <Home />} />
+                <Route exact path='/confirm' element={AuthCheck()  ? <Confirm /> : <Home />} />
 
-            </Routes>
+
+        </Routes>
             </BrowserRouter>
+
 
     </div>
   );

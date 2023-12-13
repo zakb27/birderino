@@ -4,6 +4,7 @@ import AdminNav from "../components/AdminNav"
 import UserNav from "../components/UserNav"
 import { useDispatch, useSelector } from 'react-redux';
 import {useNavigate} from "react-router-dom";
+import Footer from "../components/Footer";
 const Confirm = () =>{
     const navigate = useNavigate()
     const isAdmin = useSelector((state) => state.user.isAdmin);
@@ -21,6 +22,7 @@ const Confirm = () =>{
                     <button className={'submitBird'} onClick={e=>navigate('/dash')}> Return -></button>
                 </div>
             </div>
+            <Footer />
         </>
     )
 

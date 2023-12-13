@@ -3,6 +3,7 @@ import React from "react";
 import AdminNav from "../components/AdminNav"
 import UserNav from "../components/UserNav"
 import { useDispatch, useSelector } from 'react-redux';
+import Footer from "../components/Footer";
 const Dash = () =>{
 
     const isAdmin = useSelector((state) => state.user.isAdmin);
@@ -29,6 +30,7 @@ const Dash = () =>{
                     </div>
                 </section>
             </div>
+            <Footer />
         </>
     )
 

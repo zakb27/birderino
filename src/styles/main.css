@@ -6,7 +6,10 @@
     --main3: #3a5a40;
     --main4: #588157;
     --main5: #CCD5AEFF;
-
+    --red: #d53b3b;
+    --darkRed: #421111;
+    --green: #4baf4b;
+    --darkgreen: #0c280b;
     /*--main1: #e0ece6;*/
     /*--main2: #20231b;*/
     /*--main3: #c6fcce;*/
@@ -40,6 +43,7 @@
     justify-content: space-around;
     min-height:600px;
     padding: 5%;
+    gap:25px;
     background: rgba(255, 255, 255, 0.10);
     border-radius: 15px;
 }
@@ -50,6 +54,7 @@
     flex-direction: column;
     align-items: center;
     padding-top:80px;
+    padding-bottom: 80px;
 }
 .dashPage h1{
     font-size:4rem;
@@ -78,7 +83,7 @@
 }
 .mission2 h5{
     font-size: 1.5rem;
-    color: #b93737;
+    color: var(--darkRed);
 }
 
 .mission div{
@@ -86,7 +91,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width:30%;
+    min-width:20%;
+    max-width:400px;
 }
 .mission2 div{
     width:100%;
@@ -103,9 +109,8 @@
 .mission img{
     box-shadow: var(--main1) 5px 5px;
     border-radius: 5px;
-    width:60%;
-    max-width: 900px;
-    min-width:350px;
+    min-width:50%;
+    max-width: 800px;
     height: auto;
 }
 .mission2 img{
@@ -159,6 +164,7 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    gap:20px;
     align-items: center;
     justify-content: space-evenly;
 }
@@ -168,7 +174,9 @@
     padding:25px;
     border-radius: 15px;
     height:500px;
-    width:25%;
+    min-width:300px;
+    max-width:400px;
+    /*width:25%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -201,24 +209,37 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+
     justify-content: center;
     height:50px;
     margin-top: -50px;
-    gap:5px;
+    gap:25px;
     background-color: rgba(255, 255, 255, 0.15);
 
 }
 footer a{
     color: black;
     cursor: pointer;
-    margin-top: 4px;
+    margin-top: 0px;
     transition: 0.3s;
+    font-size:1rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+    background-color: rgba(0,0,0,0) !important;
+}
+footer a h1{
+    font-size:1rem;
+
+    color: black;
 }
 footer a:hover{
     transform:scale(1.1);
 }
 footer h4{
-    font-size:0.8rem;
+    font-size:1rem;
 }
 
 
@@ -295,6 +316,20 @@ form p span{
     position: relative;
 }
 
+.guideContainer{
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 25px;
+    padding: 20px 50px 200px;
+    max-width:1000px;
+    margin: 200px auto;
+    gap:10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
 .settingsTitle{
     font-size: 2.5rem;
     font-weight: 600;
@@ -302,6 +337,19 @@ form p span{
 .switches_container{
     width:100%;
     max-width: 400px;
+}
+.guideContainer .switches_container{
+    width:100%;
+    max-width: 700px;
+}
+.guideContainer h2{
+    font-size: 3rem;
+}
+.guideContainer .switches_container h2{
+    font-size: 1.7rem;
+}
+.guideContainer .switches_container p{
+    font-size: 1.1rem;
 }
 .switches_container div{
     display: flex;
@@ -769,6 +817,7 @@ input[type=number]{
     position: relative;
     width:300px;
     background-color: var(--main1);
+    font-size:1.2rem;
 }
 .previewContainer{
     position: fixed;
@@ -929,7 +978,7 @@ input[type=number]{
 
 .confirmContainer{
     margin: 200px auto;
-    width:700px;
+    max-width:700px;
     height:200px;
     background-color: var(--main3);
     text-align: center;
@@ -1018,8 +1067,8 @@ input[type=number]{
     gap:10px;
 }
 .approve,.reject{
-    background-color: #4baf4b;
-    color: #0c280b;
+    background-color: var(--green);
+    color: var(--darkgreen);
     padding:10px 35px;
     font-size: 1.8rem;
     font-weight: 600;
@@ -1030,8 +1079,8 @@ input[type=number]{
 
 }
 .approveDiff{
-    background-color: #4baf4b;
-    color: #0c280b;
+    background-color: var(--green);
+    color: var(--darkgreen);
     padding:10px 35px;
     font-size: 1.8rem;
     font-weight: 600;
@@ -1041,8 +1090,8 @@ input[type=number]{
     margin:10px;
 }
 .reject{
-    background-color: #d53b3b;
-    color: #421111;
+    background-color: var(--red);
+    color: var(--darkRed);
 }
 
 

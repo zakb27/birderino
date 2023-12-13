@@ -3,6 +3,7 @@ import React,{useState} from "react";
 import AdminNav from "../components/AdminNav"
 import { useDispatch, useSelector } from 'react-redux';
 import {FaAngleDown, FaAngleUp} from "react-icons/fa";
+import Footer from "../components/Footer";
 
 const FlaggedTickets = () =>{
     return(<>
@@ -94,6 +95,7 @@ const Flagged = () =>{
                     }
                 </div>
             </div>
+            <Footer />
         </>
     )
 

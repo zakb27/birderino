@@ -8,6 +8,7 @@ import {useNavigate, useLocation} from "react-router-dom";
 import { FaExpand } from "react-icons/fa";
 import { FiMinimize } from "react-icons/fi";
 import {BirdData} from "../tools/BirdData";
+import Footer from "../components/Footer";
 
 
 
@@ -77,6 +78,7 @@ const SearchStats = () =>{
 
 
             </div>
+            <Footer />
         </>
     )
 }

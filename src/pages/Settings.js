@@ -9,6 +9,7 @@ import Slider from "@mui/material/Slider/Slider";
 import {cAnimations, cContrast, cDarkMode, cDeuter, cSliders} from "../tools/AccessActions";
 import {FaExpand, FaMinus, FaPlus} from "react-icons/fa";
 import {FiMinimize} from "react-icons/fi";
+import Footer from "../components/Footer";
 const Settings = () =>{
     const dispatch = useDispatch()
 
@@ -19,9 +20,18 @@ const Settings = () =>{
     const [deuter,changeDeuter] = useState(useSelector((state) => state.new.deuter))
     const teseter = useRef()
     const isAdmin = useSelector((state) => state.user.isAdmin);
+    const isLoggedIn = useSelector((state) => state.user.isLoggedIn);
+
     const funkyContrast = async()=>{
+
+        changeDarkMode(false)
+        dispatch(cDarkMode(false))
+        dispatch(cDeuter(false))
+        changeDeuter(false)
+
+        dispatch(cContrast(!highContrast))
         changeContrast(!highContrast)
-        dispatch(cContrast(highContrast))
+
         console.log(highContrast)
         if(!highContrast){
             document.documentElement.style.setProperty('--main1', 'white');
@@ -29,6 +39,10 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--main3', 'white');
             document.documentElement.style.setProperty('--main4', 'black');
             document.documentElement.style.setProperty('--main5', 'black');
+            document.documentElement.style.setProperty('--red', '#d53b3b');
+            document.documentElement.style.setProperty('--darkRed', '#421111');
+            document.documentElement.style.setProperty('--green', '#4baf4b');
+            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
         }
         else{
             document.documentElement.style.setProperty('--main1', '#344e41');
@@ -36,10 +50,20 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--main3', '#3a5a40');
             document.documentElement.style.setProperty('--main4', '#588157');
             document.documentElement.style.setProperty('--main5', '#CCD5AEFF');
+            document.documentElement.style.setProperty('--red', '#d53b3b');
+            document.documentElement.style.setProperty('--darkRed', '#421111');
+            document.documentElement.style.setProperty('--green', '#4baf4b');
+            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
         }
 
     }
     const funkyDark = ()=>{
+        // Have to do manually with error from state not updating quick enough
+
+        dispatch(cContrast(false))
+        changeContrast(false)
+        dispatch(cDeuter(false))
+        changeDeuter(false)
 
         dispatch(cDarkMode(!darkMode))
         changeDarkMode(!darkMode)
@@ -49,6 +73,10 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--main3', '#c6fcce');
             document.documentElement.style.setProperty('--main4', '#172116');
             document.documentElement.style.setProperty('--main5', '#1c1f12');
+            document.documentElement.style.setProperty('--red', '#d53b3b');
+            document.documentElement.style.setProperty('--darkRed', '#421111');
+            document.documentElement.style.setProperty('--green', '#4baf4b');
+            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
         }
         else{
             document.documentElement.style.setProperty('--main1', '#344e41');
@@ -56,6 +84,10 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--main3', '#3a5a40');
             document.documentElement.style.setProperty('--main4', '#588157');
             document.documentElement.style.setProperty('--main5', '#CCD5AEFF');
+            document.documentElement.style.setProperty('--red', '#d53b3b');
+            document.documentElement.style.setProperty('--darkRed', '#421111');
+            document.documentElement.style.setProperty('--green', '#4baf4b');
+            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
         }
 
     }
@@ -65,11 +97,38 @@ const Settings = () =>{
 
         document.body.classList.toggle('disable-transitions')
 
-
     }
     const changerColour = () =>{
         dispatch(cDeuter(!deuter))
         changeDeuter(!deuter)
+        changeDarkMode(false)
+        dispatch(cDarkMode(false))
+        dispatch(cContrast(false))
+        changeContrast(false)
+
+        if(!deuter){
+            document.documentElement.style.setProperty('--main1', 'white');
+            document.documentElement.style.setProperty('--main2', 'black');
+            document.documentElement.style.setProperty('--main3', 'white');
+            document.documentElement.style.setProperty('--main4', 'black');
+            document.documentElement.style.setProperty('--main5', 'black');
+            document.documentElement.style.setProperty('--red', 'black');
+            document.documentElement.style.setProperty('--darkRed', 'white');
+            document.documentElement.style.setProperty('--green', 'black');
+            document.documentElement.style.setProperty('--darkGreen', 'white');
+
+        }
+        else{
+            document.documentElement.style.setProperty('--main1', '#344e41');
+            document.documentElement.style.setProperty('--main2', '#a3b18a');
+            document.documentElement.style.setProperty('--main3', '#3a5a40');
+            document.documentElement.style.setProperty('--main4', '#588157');
+            document.documentElement.style.setProperty('--main5', '#CCD5AEFF');
+            document.documentElement.style.setProperty('--red', '#d53b3b');
+            document.documentElement.style.setProperty('--darkRed', '#421111');
+            document.documentElement.style.setProperty('--green', '#4baf4b');
+            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+        }
 
     }
     const handleUpChange = () =>{
@@ -106,10 +165,14 @@ const Settings = () =>{
 
     return(
         <>
-            {isAdmin ?
-                (<AdminNav />)
+            {isLoggedIn?
+                (isAdmin ?
+                        (<AdminNav />)
+                        :
+                        (<UserNav />)
+                )
                 :
-                (<UserNav />)
+                (<DashNav />)
             }
             <div className={'settingsPage background'}>
 
@@ -172,6 +235,7 @@ const Settings = () =>{
                 </div>
 
             </div>
+            <Footer />
         </>
     )
 }

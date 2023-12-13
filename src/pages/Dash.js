@@ -16,7 +16,7 @@ const Dash = () =>{
                 (<UserNav />)
             }
             <div className={'dashPage background'}>
-                <h1>Bird of the day</h1>
+                <h1>Dashboard</h1>
                 <section className="mission2">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Eurasian_blue_tit_Lancashire.jpg/440px-Eurasian_blue_tit_Lancashire.jpg" alt="Blue tit bird"/>
 

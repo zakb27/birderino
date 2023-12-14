@@ -21,7 +21,7 @@ const BirdCard = ({bird}) => {
 
     return (
         <div className={`bird ${isExpanded ? 'expanded' : ''}`}>
-            <img src={bird.image} alt={`Image of ${bird.name}`} />
+            <img src={bird.image} alt={bird.alt}/>
             <div className="remaining">
                 <div className="titles">
                     <h1 className={'left'}>{bird.name}</h1>

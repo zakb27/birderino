@@ -10,7 +10,6 @@ import {BirdData} from "../tools/BirdData";
 import {useNavigate} from "react-router-dom";
 import { FaPlus,FaMinus } from "react-icons/fa";
 import { IoMdClose } from "react-icons/io";
-import GoogleMapReact from 'google-map-react';
 import Footer from "../components/Footer";
 const SubmitCard = ({bird,updateBirdCount}) => {
     const [isExpanded, setExpanded] = useState(false);

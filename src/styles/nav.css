@@ -54,7 +54,10 @@
     font-size:1.3rem;
 
 }
-
+.specify{
+    border:2px solid rgba(255, 255, 255, 0.5);
+    padding:8px 15px !important;
+}
 .settings_links{
     text-decoration: none;
     color: white;

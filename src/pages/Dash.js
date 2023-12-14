@@ -18,7 +18,7 @@ const Dash = () =>{
             <div className={'dashPage background'}>
                 <h1>Dashboard</h1>
                 <section className="mission2">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Eurasian_blue_tit_Lancashire.jpg/440px-Eurasian_blue_tit_Lancashire.jpg" alt="Blue tit bird"/>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Eurasian_blue_tit_Lancashire.jpg/440px-Eurasian_blue_tit_Lancashire.jpg" alt="Blue Tit perched on a branch looking to the left"/>
 
                     <div>
                         <h1>The Blue Tit</h1>

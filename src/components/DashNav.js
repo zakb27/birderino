@@ -28,7 +28,7 @@ const DashNav = () =>{
             <ul ref={tester} role="menu" aria-label="menu">
                 <IoMdClose onClick={e=>closeMenu()}/>
                 <li role="menuitem" >
-                    <NavLink to={'/signin'} className={'links'}>
+                    <NavLink to={'/signin'} className={'links specify'}>
                         <span className={'sign'} tabIndex="0">Sign in</span>
                     </NavLink>
                 </li>

@@ -29,10 +29,6 @@ const Stats = () =>{
             name: 'Goldfinch'
         },
         {
-            id: 4,
-            name: 'Peregrine Falcon'
-        },
-        {
             id: 5,
             name: 'Common Kestrel'
         },

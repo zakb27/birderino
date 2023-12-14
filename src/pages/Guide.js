@@ -3,7 +3,6 @@ import AdminNav from "../components/AdminNav";
 import UserNav from "../components/UserNav";
 import {FaToggleOff, FaToggleOn} from "react-icons/fa6";
 import {FaMinus, FaPlus} from "react-icons/fa";
-import Slider from "@mui/material/Slider/Slider";
 import {useSelector} from "react-redux";
 import DashNav from "../components/DashNav";
 import Footer from "../components/Footer";

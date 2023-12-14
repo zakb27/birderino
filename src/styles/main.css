@@ -596,6 +596,7 @@ form h1{
 }
 .birds_rank h3{
     width:100px;
+    color: var(--main3);
 }
 .test1{
     grid-column: 1/2;
@@ -964,7 +965,10 @@ input[type=number]{
 
 }
 .dropdown ul{
-    background-color: var(--main5);
+    /*background-color: var(--main5);*/
+    /*background-color: rgba(105, 105, 105, 0.2);*/
+    border:5px solid black;
+    color: black;
     border-radius: 25px;
     width:400px;
     height:400px;
@@ -980,7 +984,8 @@ input[type=number]{
 .dorp{
     width:400px;
     height:400px;
-    background-color: #344e41;
+    /*background-color: #344e41;*/
+
 }
 .submitBird3{
     position: fixed;
@@ -1050,6 +1055,7 @@ input[type=number]{
 }
 .confirmContainer{
     margin: 200px auto;
+    width:100%;
     max-width:700px;
     height:200px;
     background-color: var(--main3);
@@ -1070,7 +1076,11 @@ input[type=number]{
     margin:0;
     color: var(--main5);
 }
-
+.confirmPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 .confirmContainer button{
     width:100%;
     height:40%;

@@ -21,6 +21,9 @@
     /*--main4: black;*/
     /*--main5: black;*/
 }
+div{
+    overflow: scroll;
+}
 .disable-transitions *{
     transition: none !important; /* Disable transitions */
  }
@@ -214,7 +217,9 @@
     font-size:2rem;
     color: var(--main1);
 }
-
+.birdsections div p{
+    margin:0;
+}
 .homeContainer {
 }
 footer{
@@ -1147,6 +1152,9 @@ input[type=number]{
     align-items: center;
     justify-content: center;
     gap:10px;
+    z-index: 200;
+    overflow: visible;
+
 }
 .approve,.reject{
     background-color: var(--green);
@@ -1158,7 +1166,11 @@ input[type=number]{
     cursor: pointer;
     border-radius: 25px;
     width:200px;
+    z-index: 200;
 
+}
+.reasons{
+    z-index:1;
 }
 .approveDiff{
     background-color: var(--green);

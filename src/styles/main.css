@@ -682,7 +682,7 @@ form h1{
     gap:50px;
     max-width:1200px;
     transition: 0.3s ease-in-out;
-
+    overflow: visible;
 
 }
 .bird{

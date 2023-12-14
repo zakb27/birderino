@@ -35,12 +35,12 @@ const SubmitCard = ({bird,updateBirdCount}) => {
 
                 {isExpanded ? <p id="bigSummary" className={'left'}>{bird.bigSummary}</p>:<p id="miniSummary" className={'left'}>{bird.miniSummary}</p>}
                 <div className="submission">
-                    <FaMinus onClick={e=>{
+                    <FaMinus tabIndex="0" onClick={e=>{
                         if(number>0) {
                             handleNumberChange(number-1)}
                     }}/>
-                    <input min={0} max={50} typeof="number"  value={number} onChange={(e) => changeNumber(e.target.value)} />
-                    <FaPlus onClick={e=>handleNumberChange(number+1)}/>
+                    <input min={0} max={50} typeof="number"  value={number} onChange={(e) => handleNumberChange(e.target.value)} />
+                    <FaPlus tabIndex="0" onClick={e=>handleNumberChange(number+1)}/>
                 </div>
 
             </div>

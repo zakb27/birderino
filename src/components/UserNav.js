@@ -41,17 +41,17 @@ const UserNav = () =>{
                         <span className={'stats'}>Statistics</span>
                     </NavLink>
                 </li>
-                <li role="menuitem" tabIndex="0">
+                <li role="menuitem">
                     <NavLink to={'/submit'} activeclassname={'active'} className={'links'}>
                         <span className={'submit'}  tabIndex="0">Submit results</span>
                     </NavLink>
                 </li>
-                <li role="menuitem" tabIndex="0" className={'hide'}>
+                <li role="menuitem" className={'hide'}>
                     <NavLink to={'/settings'} activeclassname={'active'} className={'links'}>
                         <span tabIndex="0">Settings</span>
                     </NavLink>
                 </li>
-                <li role="menuitem" tabIndex="0" className={'hide'}>
+                <li role="menuitem"className={'hide'}>
                     <NavLink to={'/'} activeclassname={'active'} className={'links'}>
                         <span tabIndex="0">Sign out</span>
                     </NavLink>

@@ -44,7 +44,7 @@
 
 }
 .adminNav ul ,.userNav ul{
-    margin-left: -160px;
+    margin-left: -150px;
 
 }
 .sign,.register{
@@ -86,28 +86,28 @@
     justify-content: center;
     gap:25px;
 }
-.diff{
-    text-decoration: none;
+/*.diff{*/
+/*    text-decoration: none;*/
 
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    padding:10px 15px;
-    color: var(--main1);
-    background-color: var(--main2);
-    border: 2px solid var(--main3);
-    border-radius: 20px;
-    font-size:1.3rem;
+/*    text-align: center;*/
+/*    transition: 0.3s ease-in-out;*/
+/*    padding:10px 15px;*/
+/*    color: var(--main1);*/
+/*    background-color: var(--main2);*/
+/*    border: 2px solid var(--main3);*/
+/*    border-radius: 20px;*/
+/*    font-size:1.3rem;*/
 
-    font-family: 'Poppins', sans-serif;
-}
+/*    font-family: 'Poppins', sans-serif;*/
+/*}*/
 .signout{
     font-weight: 400;
     font-family: 'Poppins', sans-serif;
 }
-.diff:hover{
-    background-color: rgba(0,0,0,0);
-    color: white;
-}
+/*.diff:hover{*/
+/*    background-color: rgba(0,0,0,0);*/
+/*    color: white;*/
+/*}*/
 
 .links{
     text-decoration: none;
@@ -152,9 +152,11 @@
     border-bottom:2px solid rgba(0,0,0,0);
 }
 
-.register{
+.register,.diff{
     box-sizing: content-box;
     /*padding:5px 20px;*/
+    text-decoration: none;
+
     color: var(--main2);
     background: var(--main3);
     border: 2px solid var(--main4);
@@ -168,7 +170,7 @@
 /*.sign:hover{*/
 /*    border-bottom:2px solid #a3b18a;*/
 /*}*/
-.register:hover{
+.register:hover,.diff:hover{
     background-color: var(--main2);
     color: var(--main3);
 }

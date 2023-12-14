@@ -49,7 +49,7 @@ const Register = () =>{
 
     return(<>
         <DashNav />
-            <div className={'background'}>
+            <div className={'background registerContainer'}>
 
 
 

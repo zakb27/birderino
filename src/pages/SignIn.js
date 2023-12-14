@@ -39,7 +39,7 @@ const SignIn = () =>{
 
     return(<>
             <DashNav />
-            <div className={'background'}>
+            <div className={'background signContainer'}>
 
 
             <form onSubmit={handleSubmit} className={'loginForm'}>
@@ -74,8 +74,9 @@ const SignIn = () =>{
                 <p>Don't have an account? Register <span onClick={e=>navigate('/register')}>here:</span> </p>
 
             </form>
+                <Footer />
+
             </div>
-            <Footer />
 
         </>
     )

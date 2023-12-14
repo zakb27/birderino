@@ -29,8 +29,9 @@ const Dash = () =>{
                         <h5>Total count of 321 today!</h5>
                     </div>
                 </section>
+                <Footer />
+
             </div>
-            <Footer />
         </>
     )
 

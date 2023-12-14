@@ -94,8 +94,9 @@ const Flagged = () =>{
 
                     }
                 </div>
+                <Footer />
+
             </div>
-            <Footer />
         </>
     )
 

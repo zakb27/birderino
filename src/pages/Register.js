@@ -12,7 +12,7 @@ const Register = () =>{
     const [confirmEmail, setConfirmEmail] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
     const [code, setAssociate] = useState('');
-
+    const [errorCode,changeErrorCode] = useState('');
 
     useEffect(() => {
         dispatch(logout())
@@ -25,9 +25,14 @@ const Register = () =>{
             password,
             code,
         };
-
-
-
+        if(email!==confirmEmail){
+            changeErrorCode('Emails do not match')
+            return;
+        }
+        if(password!==confirmPassword){
+            changeErrorCode('Passwords do not match')
+            return;
+        }
         if(code!==''){
             dispatch(login(true))
         }
@@ -72,6 +77,8 @@ const Register = () =>{
             <input
                 type="password"
                 value={password}
+                minLength={7}
+                maxLength={20}
                 onChange={(e) => setPassword(e.target.value)}
                 placeholder={"Password..."}
                 required
@@ -82,7 +89,8 @@ const Register = () =>{
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     placeholder={"Confirm Password..."}
-
+                    minLength={7}
+                    maxLength={20}
                     required
                 />
 
@@ -96,9 +104,11 @@ const Register = () =>{
 
             <button type="submit" tabIndex='0'>Register</button>
                 <p>Already have an account? Sign in <span onClick={e=>navigate('/signin')}>here:</span> </p>
+                <p className={'errorCode'}>{errorCode}  </p>
         </form>
+                <Footer />
+
             </div>
-            <Footer />
 
         </>
 )

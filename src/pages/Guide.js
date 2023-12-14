@@ -69,9 +69,9 @@ return(
 
 
             </div>
+            <Footer />
 
         </div>
-            <Footer />
     </>
 )
 

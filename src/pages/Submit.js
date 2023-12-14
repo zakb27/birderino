@@ -119,7 +119,7 @@ const Submit = () =>{
                     ))}
 
                 </div>
-                <button onClick={handleSubmit}>Submit</button>
+                {/*<button onClick={handleSubmit}>Submit</button>*/}
                 {Object.keys(birdCounts).length>0&&
                     <div className="previewContainer">
                         <div className="desktopPreview">
@@ -168,8 +168,8 @@ const Submit = () =>{
                         }}>Submit</button>
                     </div>
                 )}
+                <Footer />
             </div>
-            <Footer />
         </>
     )
 }

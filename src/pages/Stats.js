@@ -159,9 +159,9 @@ const Stats = () =>{
                         <img src={image} alt="Heatmap of the UK"/>
                     </div>
                 </div>
+                <Footer />
 
             </div>
-            <Footer />
         </>
     )
 }

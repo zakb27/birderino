@@ -6,16 +6,16 @@ const Footer = () =>{
     return(<>
         <footer>
             <NavLink to={'/guide'} activeclassname={'else'}>
-                <h1>Guide of use</h1>
+                <h4>Guide of use</h4>
             </NavLink>
             <a href="https://github.com/zakb27/birderino">
                 <FaGithub />
-                <h4>Made by Birderino team</h4>
+                <h4>Made by the Birderino team</h4>
             </a>
 
 
             <NavLink to={'/settings'} activeclassname={'else'}>
-                <h1>Accessibility</h1>
+                <h4>Accessibility</h4>
             </NavLink>
         </footer>
         </>

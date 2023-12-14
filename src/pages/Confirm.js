@@ -21,8 +21,9 @@ const Confirm = () =>{
                     <h1>Submission complete</h1>
                     <button className={'submitBird'} onClick={e=>navigate('/dash')}> Return -></button>
                 </div>
+                <Footer />
+
             </div>
-            <Footer />
         </>
     )
 

@@ -233,9 +233,9 @@ const Settings = () =>{
                     </div>
 
                 </div>
+                <Footer />
 
             </div>
-            <Footer />
         </>
     )
 }

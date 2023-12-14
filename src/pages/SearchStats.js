@@ -76,9 +76,9 @@ const SearchStats = () =>{
 
                 </div>
 
+                <Footer />
 
             </div>
-            <Footer />
         </>
     )
 }

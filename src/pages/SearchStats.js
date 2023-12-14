@@ -43,6 +43,7 @@ const BirdCard = ({bird}) => {
 
 const SearchStats = () =>{
     const navigate = useNavigate()
+    let titleContent='All birds';
     const {state} = useLocation();
     const { item} = state; // Read values passed on state
 
@@ -51,6 +52,9 @@ const SearchStats = () =>{
     let filteredData;
     if(item && item.trim() !== ''){
         filteredData = BirdData.filter(obj => obj.name.toLowerCase() === item.toLowerCase());
+        // changeTitle('Search for \''+item+'\'')
+        titleContent = ('Search: \''+item+'\'')
+
     }
     else{
         filteredData = BirdData;
@@ -67,7 +71,7 @@ const SearchStats = () =>{
             <div className="searchPage background">
                 <div className={'pageTitle'}>
                     <button onClick={e=>navigate('/stats')}><MdOutlineArrowBack /></button>
-                    <h1>All birds</h1>
+                    <h1>{titleContent}</h1>
                 </div>
                 <div className="birdContainer">
                     {filteredData.map((bird, index) => (

@@ -564,12 +564,18 @@ form h1{
     width:100%;
     margin: 50px auto;
 
-    height:80vh;
+    /*height:80vh;*/
 }
 
 .rankings{
     border-radius: 25px;
     width:400px;
+}
+.charts{
+    overflow: visible !important;
+}
+.searchBar{
+    overflow: visible !important;
 }
 .heatmap{
     background-color: rgba(255, 255, 255, 0);
@@ -578,8 +584,10 @@ form h1{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    overflow: hidden;
     align-items: center;
+    min-height:100%;
+    overflow: scroll !important;
+
 }
 
 .rankings h2{
@@ -908,6 +916,18 @@ input[type=number]{
 .desktopPreview ul{
     list-style: none;
 
+}
+
+
+.statsPage{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.statsPage footer{
+    margin-left: 0;
+    /*margin-bottom: 0px;*/
 }
 
 .modal{

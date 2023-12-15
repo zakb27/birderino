@@ -38,7 +38,7 @@ const UserNav = () =>{
 
                 <li role="menuitem">
                     <NavLink to={'/stats'} activeclassname={'active'} className={'links'}>
-                        <span className={'stats'}>Statistics</span>
+                        <span className={'stats'} tabIndex="0">Statistics</span>
                     </NavLink>
                 </li>
                 <li role="menuitem">

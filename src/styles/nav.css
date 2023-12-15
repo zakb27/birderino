@@ -248,6 +248,13 @@ ul svg{
     .links:hover{
         background-color: var(--main4);
     }
+    .register:hover{
+        background-color: var(--main4);
+        color: white;
+    }
+    .links{
+        border: none;
+    }
     .links span{
         padding:45px 25px !important;
         font-size: 2.5rem;
@@ -265,6 +272,7 @@ ul svg{
     .sign,.register{
         font-size: 2rem;
         padding:0 ;
+        font-family: 'Montserrat', sans-serif;
     }
 
     ul svg{

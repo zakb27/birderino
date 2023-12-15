@@ -1,15 +1,6 @@
 // All summaries are from the RSPB https://www.rspb.org.uk.
 export const BirdData = [
     {
-        name: 'European Robin',
-        scienceName: 'Erithacus rubecula',
-        alt:'Robin sitting on a branch looking to the left',
-        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/440px-Erithacus_rubecula_with_cocked_head.jpg',
-        miniSummary: 'The UK\'s favourite bird. Thanks to its bright red breast it\'s familiar throughout the year.',
-        bigSummary: 'The UK\'s favourite bird. Thanks to its bright red breast, it\'s familiar throughout the year and especially at Christmas! Males and females look identical, young birds have no red breast and are spotted with golden brown. Robins sing nearly all year round and despite their cute appearance, they are aggressively territorial and are quick to drive away intruders. They will sing at night next to street lights.',
-        seen: 3000,
-    },
-    {
         name: 'Blue Tit',
         scienceName: 'Cyanistes caeruleus',
         alt:'Blue Tit perched on a branch looking to the left',
@@ -37,7 +28,7 @@ export const BirdData = [
         seen: 1800,
     },
     {
-        name: 'Common Kestrel',
+        name: 'Kestrel',
         scienceName: 'Falco tinnunculus',
         alt:'Common Kestrel perched on a branch looking behind to the camera',
         image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Common_kestrel_falco_tinnunculus.jpg/440px-Common_kestrel_falco_tinnunculus.jpg',
@@ -119,6 +110,15 @@ export const BirdData = [
         miniSummary: 'The Wren is a tiny brown bird, although it\'s heavier and not as slim as the even smaller Goldcrest.',
         bigSummary: 'The Wren is a tiny brown bird, although it\'s heavier and not as slim as the even smaller Goldcrest. It\'s almost round in shape with a fine bill, quite long legs and toes, very short round wings and a short, narrow tail, which is sometimes stuck up vertically. For such a small bird, it has a remarkably loud voice. ',
         seen: 800,
+    },
+    {
+        name: 'European Robin',
+        scienceName: 'Erithacus rubecula',
+        alt:'Robin sitting on a branch looking to the left',
+        image: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f3/Erithacus_rubecula_with_cocked_head.jpg/440px-Erithacus_rubecula_with_cocked_head.jpg',
+        miniSummary: 'The UK\'s favourite bird. Thanks to its bright red breast it\'s familiar throughout the year.',
+        bigSummary: 'The UK\'s favourite bird. Thanks to its bright red breast, it\'s familiar throughout the year and especially at Christmas! Males and females look identical, young birds have no red breast and are spotted with golden brown. Robins sing nearly all year round and despite their cute appearance, they are aggressively territorial and are quick to drive away intruders. They will sing at night next to street lights.',
+        seen: 3000,
     },
     {
         name: 'Nuthatch',

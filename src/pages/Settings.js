@@ -42,7 +42,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', '#d53b3b');
             document.documentElement.style.setProperty('--darkRed', '#421111');
             document.documentElement.style.setProperty('--green', '#4baf4b');
-            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+            document.documentElement.style.setProperty('--darkgreen', '#0c280b');
         }
         else{
             document.documentElement.style.setProperty('--main1', '#344e41');
@@ -53,7 +53,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', '#d53b3b');
             document.documentElement.style.setProperty('--darkRed', '#421111');
             document.documentElement.style.setProperty('--green', '#4baf4b');
-            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+            document.documentElement.style.setProperty('--darkgreen', '#0c280b');
         }
 
     }
@@ -76,7 +76,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', '#d53b3b');
             document.documentElement.style.setProperty('--darkRed', '#421111');
             document.documentElement.style.setProperty('--green', '#4baf4b');
-            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+            document.documentElement.style.setProperty('--darkgreen', '#0c280b');
         }
         else{
             document.documentElement.style.setProperty('--main1', '#344e41');
@@ -87,7 +87,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', '#d53b3b');
             document.documentElement.style.setProperty('--darkRed', '#421111');
             document.documentElement.style.setProperty('--green', '#4baf4b');
-            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+            document.documentElement.style.setProperty('--darkgreen', '#0c280b');
         }
 
     }
@@ -115,7 +115,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', 'black');
             document.documentElement.style.setProperty('--darkRed', 'white');
             document.documentElement.style.setProperty('--green', 'black');
-            document.documentElement.style.setProperty('--darkGreen', 'white');
+            document.documentElement.style.setProperty('--darkgreen', 'white');
 
         }
         else{
@@ -127,7 +127,7 @@ const Settings = () =>{
             document.documentElement.style.setProperty('--red', '#d53b3b');
             document.documentElement.style.setProperty('--darkRed', '#421111');
             document.documentElement.style.setProperty('--green', '#4baf4b');
-            document.documentElement.style.setProperty('--darkGreen', '#0c280b');
+            document.documentElement.style.setProperty('--darkgreen', '#0c280b');
         }
 
     }
@@ -183,26 +183,26 @@ const Settings = () =>{
                         <div className="highContrast">
                             <h2 className={'bigtest'}>High Contrast</h2>
                             <button onClick={e=>funkyContrast()}>
-                                {highContrast ? <FaToggleOn style={{ color: highContrast ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: highContrast ? 'green' : 'black' }} />}
+                                {highContrast ? <FaToggleOn style={{ color: highContrast ? 'var(--main3)' : 'black' }} /> : <FaToggleOff style={{ color: highContrast ? 'var(--main3)' : 'black' }} />}
                             </button>
 
                         </div>
                         <div className="darkMode">
                             <h2>Dark Mode</h2>
                             <button onClick={e=>funkyDark()}>
-                                {darkMode ? <FaToggleOn style={{ color: darkMode ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: darkMode ? 'green' : 'black' }} />}
+                                {darkMode ? <FaToggleOn style={{ color: darkMode ? 'var(--main3)' : 'black' }} /> : <FaToggleOff style={{ color: darkMode ? 'var(--main3)' : 'black' }} />}
                             </button>
                         </div>
                         <div className="disableAnimations">
                             <h2>Animations</h2>
                             <button onClick={e=>funkyAnimations()}>
-                                {disableAnimations ?  <FaToggleOn style={{ color: disableAnimations ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: disableAnimations ? 'green' : 'black' }} />}
+                                {disableAnimations ?  <FaToggleOn style={{ color: disableAnimations ? 'var(--main3)' : 'black' }} /> : <FaToggleOff style={{ color: disableAnimations ? 'var(--main3)' : 'black' }} />}
                             </button>
                         </div>
                         <div className="deuter">
                             <h2>Deuteranomaly</h2>
                             <button onClick={e=>changerColour()}>
-                                {deuter ?  <FaToggleOn style={{ color: deuter ? 'green' : 'black' }} /> : <FaToggleOff style={{ color: deuter ? 'green' : 'black' }} />}
+                                {deuter ?  <FaToggleOn style={{ color: deuter ? 'var(--main3)' : 'black' }} /> : <FaToggleOff style={{ color: deuter ? 'var(--main3)' : 'black' }} />}
                             </button>
                         </div>
 

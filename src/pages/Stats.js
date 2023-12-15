@@ -30,7 +30,7 @@ const Stats = () =>{
         },
         {
             id: 5,
-            name: 'Common Kestrel'
+            name: 'Kestrel'
         },
         {
             id: 6,
